@@ -1,0 +1,950 @@
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[user]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `email` TEXT NULL, `password` TEXT NULL, `username` TEXT NULL, `nickname` TEXT NULL, `realname` TEXT NULL, `content` TEXT NULL, `avatar` TEXT NULL, `avatar_large` TEXT NULL, `avatar_medium` TEXT NULL, `avatar_small` TEXT NULL, `birth` NUMERIC NULL, `province` TEXT NULL, `city` TEXT NULL, `company` TEXT NULL, `address` TEXT NULL, `postcode` TEXT NULL, `mobile` TEXT NULL, `website` TEXT NULL, `sex` INTEGER NULL, `qq` TEXT NULL, `msn` TEXT NULL, `weibo` TEXT NULL, `ctype` INTEGER NULL, `role` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `last_login_time` NUMERIC NULL, `last_login_ip` TEXT NULL, `login_count` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `user` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `email` TEXT NULL, `password` TEXT NULL, `username` TEXT NULL, `nickname` TEXT NULL, `realname` TEXT NULL, `content` TEXT NULL, `avatar` TEXT NULL, `avatar_large` TEXT NULL, `avatar_medium` TEXT NULL, `avatar_small` TEXT NULL, `birth` NUMERIC NULL, `province` TEXT NULL, `city` TEXT NULL, `company` TEXT NULL, `address` TEXT NULL, `postcode` TEXT NULL, `mobile` TEXT NULL, `website` TEXT NULL, `sex` INTEGER NULL, `qq` TEXT NULL, `msn` TEXT NULL, `weibo` TEXT NULL, `ctype` INTEGER NULL, `role` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `last_login_time` NUMERIC NULL, `last_login_ip` TEXT NULL, `login_count` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`password`%') or (sql like '%[password]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`avatar`%') or (sql like '%[avatar]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`avatar_large`%') or (sql like '%[avatar_large]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`username`%') or (sql like '%[username]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nickname`%') or (sql like '%[nickname]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`msn`%') or (sql like '%[msn]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`login_count`%') or (sql like '%[login_count]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`sex`%') or (sql like '%[sex]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`avatar_small`%') or (sql like '%[avatar_small]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`company`%') or (sql like '%[company]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`province`%') or (sql like '%[province]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`role`%') or (sql like '%[role]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`last_login_time`%') or (sql like '%[last_login_time]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`last_login_ip`%') or (sql like '%[last_login_ip]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`realname`%') or (sql like '%[realname]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`avatar_medium`%') or (sql like '%[avatar_medium]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`birth`%') or (sql like '%[birth]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`city`%') or (sql like '%[city]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`postcode`%') or (sql like '%[postcode]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`website`%') or (sql like '%[website]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`email`%') or (sql like '%[email]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`address`%') or (sql like '%[address]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`mobile`%') or (sql like '%[mobile]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`qq`%') or (sql like '%[qq]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`weibo`%') or (sql like '%[weibo]%'))
+[user]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[user]
+CREATE INDEX `IDX_user_password` ON `user` (`password`);
+[]
+CREATE INDEX `IDX_user_updated` ON `user` (`updated`);
+[]
+CREATE INDEX `IDX_user_hotdown` ON `user` (`hotdown`);
+[]
+CREATE INDEX `IDX_user_hotvote` ON `user` (`hotvote`);
+[]
+CREATE INDEX `IDX_user_username` ON `user` (`username`);
+[]
+CREATE INDEX `IDX_user_nickname` ON `user` (`nickname`);
+[]
+CREATE INDEX `IDX_user_role` ON `user` (`role`);
+[]
+CREATE INDEX `IDX_user_hotup` ON `user` (`hotup`);
+[]
+CREATE INDEX `IDX_user_views` ON `user` (`views`);
+[]
+CREATE INDEX `IDX_user_realname` ON `user` (`realname`);
+[]
+CREATE INDEX `IDX_user_content` ON `user` (`content`);
+[]
+CREATE INDEX `IDX_user_ctype` ON `user` (`ctype`);
+[]
+CREATE INDEX `IDX_user_hotscore` ON `user` (`hotscore`);
+[]
+CREATE INDEX `IDX_user_login_count` ON `user` (`login_count`);
+[]
+CREATE INDEX `IDX_user_email` ON `user` (`email`);
+[]
+CREATE INDEX `IDX_user_created` ON `user` (`created`);
+[]
+CREATE INDEX `IDX_user_hotness` ON `user` (`hotness`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[category]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `category` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `node_time` NUMERIC NULL, `node_count` INTEGER NULL, `node_last_user_id` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `category` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `node_time` NUMERIC NULL, `node_count` INTEGER NULL, `node_last_user_id` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node_last_user_id`%') or (sql like '%[node_last_user_id]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`title`%') or (sql like '%[title]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node_count`%') or (sql like '%[node_count]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[category]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node_time`%') or (sql like '%[node_time]%'))
+[category]
+CREATE INDEX `IDX_category_pid` ON `category` (`pid`);
+[]
+CREATE INDEX `IDX_category_ctype` ON `category` (`ctype`);
+[]
+CREATE INDEX `IDX_category_content` ON `category` (`content`);
+[]
+CREATE INDEX `IDX_category_hotscore` ON `category` (`hotscore`);
+[]
+CREATE INDEX `IDX_category_author` ON `category` (`author`);
+[]
+CREATE INDEX `IDX_category_created` ON `category` (`created`);
+[]
+CREATE INDEX `IDX_category_hotness` ON `category` (`hotness`);
+[]
+CREATE INDEX `IDX_category_updated` ON `category` (`updated`);
+[]
+CREATE INDEX `IDX_category_hotdown` ON `category` (`hotdown`);
+[]
+CREATE INDEX `IDX_category_hotvote` ON `category` (`hotvote`);
+[]
+CREATE INDEX `IDX_category_uid` ON `category` (`uid`);
+[]
+CREATE INDEX `IDX_category_title` ON `category` (`title`);
+[]
+CREATE INDEX `IDX_category_hotup` ON `category` (`hotup`);
+[]
+CREATE INDEX `IDX_category_views` ON `category` (`views`);
+[]
+CREATE INDEX `IDX_category_node_count` ON `category` (`node_count`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[node]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `node` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `topic_time` NUMERIC NULL, `topic_count` INTEGER NULL, `topic_last_user_id` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `node` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `topic_time` NUMERIC NULL, `topic_count` INTEGER NULL, `topic_last_user_id` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`topic_time`%') or (sql like '%[topic_time]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`topic_count`%') or (sql like '%[topic_count]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`title`%') or (sql like '%[title]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[node]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`topic_last_user_id`%') or (sql like '%[topic_last_user_id]%'))
+[node]
+CREATE INDEX `IDX_node_updated` ON `node` (`updated`);
+[]
+CREATE INDEX `IDX_node_hotdown` ON `node` (`hotdown`);
+[]
+CREATE INDEX `IDX_node_hotvote` ON `node` (`hotvote`);
+[]
+CREATE INDEX `IDX_node_topic_count` ON `node` (`topic_count`);
+[]
+CREATE INDEX `IDX_node_uid` ON `node` (`uid`);
+[]
+CREATE INDEX `IDX_node_title` ON `node` (`title`);
+[]
+CREATE INDEX `IDX_node_hotup` ON `node` (`hotup`);
+[]
+CREATE INDEX `IDX_node_views` ON `node` (`views`);
+[]
+CREATE INDEX `IDX_node_author` ON `node` (`author`);
+[]
+CREATE INDEX `IDX_node_pid` ON `node` (`pid`);
+[]
+CREATE INDEX `IDX_node_ctype` ON `node` (`ctype`);
+[]
+CREATE INDEX `IDX_node_content` ON `node` (`content`);
+[]
+CREATE INDEX `IDX_node_hotscore` ON `node` (`hotscore`);
+[]
+CREATE INDEX `IDX_node_created` ON `node` (`created`);
+[]
+CREATE INDEX `IDX_node_hotness` ON `node` (`hotness`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[topic]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `topic` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `thumbnails` TEXT NULL, `thumbnails_large` TEXT NULL, `thumbnails_medium` TEXT NULL, `thumbnails_small` TEXT NULL, `tags` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL); ]
+CREATE TABLE IF NOT EXISTS `topic` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `thumbnails` TEXT NULL, `thumbnails_large` TEXT NULL, `thumbnails_medium` TEXT NULL, `thumbnails_small` TEXT NULL, `tags` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_small`%') or (sql like '%[thumbnails_small]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_username`%') or (sql like '%[reply_last_username]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_nickname`%') or (sql like '%[reply_last_nickname]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node`%') or (sql like '%[node]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_medium`%') or (sql like '%[thumbnails_medium]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`cid`%') or (sql like '%[cid]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_large`%') or (sql like '%[thumbnails_large]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`tags`%') or (sql like '%[tags]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nid`%') or (sql like '%[nid]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails`%') or (sql like '%[thumbnails]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`title`%') or (sql like '%[title]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`category`%') or (sql like '%[category]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[topic]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[topic]
+CREATE INDEX `IDX_topic_thumbnails` ON `topic` (`thumbnails`);
+[]
+CREATE INDEX `IDX_topic_thumbnails_large` ON `topic` (`thumbnails_large`);
+[]
+CREATE INDEX `IDX_topic_thumbnails_small` ON `topic` (`thumbnails_small`);
+[]
+CREATE INDEX `IDX_topic_tags` ON `topic` (`tags`);
+[]
+CREATE INDEX `IDX_topic_updated` ON `topic` (`updated`);
+[]
+CREATE INDEX `IDX_topic_hotdown` ON `topic` (`hotdown`);
+[]
+CREATE INDEX `IDX_topic_nid` ON `topic` (`nid`);
+[]
+CREATE INDEX `IDX_topic_attachment` ON `topic` (`attachment`);
+[]
+CREATE INDEX `IDX_topic_hotvote` ON `topic` (`hotvote`);
+[]
+CREATE INDEX `IDX_topic_hotup` ON `topic` (`hotup`);
+[]
+CREATE INDEX `IDX_topic_views` ON `topic` (`views`);
+[]
+CREATE INDEX `IDX_topic_category` ON `topic` (`category`);
+[]
+CREATE INDEX `IDX_topic_node` ON `topic` (`node`);
+[]
+CREATE INDEX `IDX_topic_uid` ON `topic` (`uid`);
+[]
+CREATE INDEX `IDX_topic_title` ON `topic` (`title`);
+[]
+CREATE INDEX `IDX_topic_thumbnails_medium` ON `topic` (`thumbnails_medium`);
+[]
+CREATE INDEX `IDX_topic_hotscore` ON `topic` (`hotscore`);
+[]
+CREATE INDEX `IDX_topic_author` ON `topic` (`author`);
+[]
+CREATE INDEX `IDX_topic_ctype` ON `topic` (`ctype`);
+[]
+CREATE INDEX `IDX_topic_content` ON `topic` (`content`);
+[]
+CREATE INDEX `IDX_topic_hotness` ON `topic` (`hotness`);
+[]
+CREATE INDEX `IDX_topic_reply_count` ON `topic` (`reply_count`);
+[]
+CREATE INDEX `IDX_topic_cid` ON `topic` (`cid`);
+[]
+CREATE INDEX `IDX_topic_created` ON `topic` (`created`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[reply]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `reply` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `author_signature` TEXT NULL, `email` TEXT NULL, `website` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL); ]
+CREATE TABLE IF NOT EXISTS `reply` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `author_signature` TEXT NULL, `email` TEXT NULL, `website` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author_signature`%') or (sql like '%[author_signature]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_username`%') or (sql like '%[reply_last_username]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_nickname`%') or (sql like '%[reply_last_nickname]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`email`%') or (sql like '%[email]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`website`%') or (sql like '%[website]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[reply]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[reply]
+CREATE INDEX `IDX_reply_pid` ON `reply` (`pid`);
+[]
+CREATE INDEX `IDX_reply_ctype` ON `reply` (`ctype`);
+[]
+CREATE INDEX `IDX_reply_content` ON `reply` (`content`);
+[]
+CREATE INDEX `IDX_reply_hotscore` ON `reply` (`hotscore`);
+[]
+CREATE INDEX `IDX_reply_author` ON `reply` (`author`);
+[]
+CREATE INDEX `IDX_reply_website` ON `reply` (`website`);
+[]
+CREATE INDEX `IDX_reply_created` ON `reply` (`created`);
+[]
+CREATE INDEX `IDX_reply_hotness` ON `reply` (`hotness`);
+[]
+CREATE INDEX `IDX_reply_author_signature` ON `reply` (`author_signature`);
+[]
+CREATE INDEX `IDX_reply_email` ON `reply` (`email`);
+[]
+CREATE INDEX `IDX_reply_reply_count` ON `reply` (`reply_count`);
+[]
+CREATE INDEX `IDX_reply_updated` ON `reply` (`updated`);
+[]
+CREATE INDEX `IDX_reply_hotdown` ON `reply` (`hotdown`);
+[]
+CREATE INDEX `IDX_reply_hotvote` ON `reply` (`hotvote`);
+[]
+CREATE INDEX `IDX_reply_uid` ON `reply` (`uid`);
+[]
+CREATE INDEX `IDX_reply_hotup` ON `reply` (`hotup`);
+[]
+CREATE INDEX `IDX_reply_views` ON `reply` (`views`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[question]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `question` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `thumbnails` TEXT NULL, `thumbnails_large` TEXT NULL, `thumbnails_medium` TEXT NULL, `thumbnails_small` TEXT NULL, `tags` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_hotscore` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL, `favorite_count` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `question` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `thumbnails` TEXT NULL, `thumbnails_large` TEXT NULL, `thumbnails_medium` TEXT NULL, `thumbnails_small` TEXT NULL, `tags` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_hotscore` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL, `favorite_count` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`title`%') or (sql like '%[title]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_hotscore`%') or (sql like '%[reply_hotscore]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nid`%') or (sql like '%[nid]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`cid`%') or (sql like '%[cid]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`category`%') or (sql like '%[category]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`favorite_count`%') or (sql like '%[favorite_count]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_large`%') or (sql like '%[thumbnails_large]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_medium`%') or (sql like '%[thumbnails_medium]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`tags`%') or (sql like '%[tags]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_username`%') or (sql like '%[reply_last_username]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_nickname`%') or (sql like '%[reply_last_nickname]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node`%') or (sql like '%[node]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails`%') or (sql like '%[thumbnails]%'))
+[question]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`thumbnails_small`%') or (sql like '%[thumbnails_small]%'))
+[question]
+CREATE INDEX `IDX_question_hotscore` ON `question` (`hotscore`);
+[]
+CREATE INDEX `IDX_question_author` ON `question` (`author`);
+[]
+CREATE INDEX `IDX_question_ctype` ON `question` (`ctype`);
+[]
+CREATE INDEX `IDX_question_content` ON `question` (`content`);
+[]
+CREATE INDEX `IDX_question_thumbnails_medium` ON `question` (`thumbnails_medium`);
+[]
+CREATE INDEX `IDX_question_reply_count` ON `question` (`reply_count`);
+[]
+CREATE INDEX `IDX_question_reply_hotscore` ON `question` (`reply_hotscore`);
+[]
+CREATE INDEX `IDX_question_cid` ON `question` (`cid`);
+[]
+CREATE INDEX `IDX_question_created` ON `question` (`created`);
+[]
+CREATE INDEX `IDX_question_hotness` ON `question` (`hotness`);
+[]
+CREATE INDEX `IDX_question_thumbnails_large` ON `question` (`thumbnails_large`);
+[]
+CREATE INDEX `IDX_question_thumbnails_small` ON `question` (`thumbnails_small`);
+[]
+CREATE INDEX `IDX_question_tags` ON `question` (`tags`);
+[]
+CREATE INDEX `IDX_question_updated` ON `question` (`updated`);
+[]
+CREATE INDEX `IDX_question_hotdown` ON `question` (`hotdown`);
+[]
+CREATE INDEX `IDX_question_nid` ON `question` (`nid`);
+[]
+CREATE INDEX `IDX_question_attachment` ON `question` (`attachment`);
+[]
+CREATE INDEX `IDX_question_thumbnails` ON `question` (`thumbnails`);
+[]
+CREATE INDEX `IDX_question_hotvote` ON `question` (`hotvote`);
+[]
+CREATE INDEX `IDX_question_views` ON `question` (`views`);
+[]
+CREATE INDEX `IDX_question_category` ON `question` (`category`);
+[]
+CREATE INDEX `IDX_question_node` ON `question` (`node`);
+[]
+CREATE INDEX `IDX_question_favorite_count` ON `question` (`favorite_count`);
+[]
+CREATE INDEX `IDX_question_uid` ON `question` (`uid`);
+[]
+CREATE INDEX `IDX_question_title` ON `question` (`title`);
+[]
+CREATE INDEX `IDX_question_hotup` ON `question` (`hotup`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[question_mark]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `question_mark` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `qid` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `question_mark` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `qid` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[question_mark]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[question_mark]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`qid`%') or (sql like '%[qid]%'))
+[question_mark]
+CREATE INDEX `IDX_question_mark_uid` ON `question_mark` (`uid`);
+[]
+CREATE INDEX `IDX_question_mark_qid` ON `question_mark` (`qid`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[answer_mark]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `answer_mark` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `aid` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `answer_mark` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `aid` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[answer_mark]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[answer_mark]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`aid`%') or (sql like '%[aid]%'))
+[answer_mark]
+CREATE INDEX `IDX_answer_mark_uid` ON `answer_mark` (`uid`);
+[]
+CREATE INDEX `IDX_answer_mark_aid` ON `answer_mark` (`aid`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[file]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `file` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `filename` TEXT NULL, `content` TEXT NULL, `hash` TEXT NULL, `location` TEXT NULL, `url` TEXT NULL, `size` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `file` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `filename` TEXT NULL, `content` TEXT NULL, `hash` TEXT NULL, `location` TEXT NULL, `url` TEXT NULL, `size` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nid`%') or (sql like '%[nid]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`location`%') or (sql like '%[location]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`cid`%') or (sql like '%[cid]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hash`%') or (sql like '%[hash]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`size`%') or (sql like '%[size]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`filename`%') or (sql like '%[filename]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[file]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`url`%') or (sql like '%[url]%'))
+[file]
+CREATE INDEX `IDX_file_nid` ON `file` (`nid`);
+[]
+CREATE INDEX `IDX_file_updated` ON `file` (`updated`);
+[]
+CREATE INDEX `IDX_file_hotdown` ON `file` (`hotdown`);
+[]
+CREATE INDEX `IDX_file_hotvote` ON `file` (`hotvote`);
+[]
+CREATE INDEX `IDX_file_uid` ON `file` (`uid`);
+[]
+CREATE INDEX `IDX_file_hotup` ON `file` (`hotup`);
+[]
+CREATE INDEX `IDX_file_views` ON `file` (`views`);
+[]
+CREATE INDEX `IDX_file_pid` ON `file` (`pid`);
+[]
+CREATE INDEX `IDX_file_ctype` ON `file` (`ctype`);
+[]
+CREATE INDEX `IDX_file_content` ON `file` (`content`);
+[]
+CREATE INDEX `IDX_file_location` ON `file` (`location`);
+[]
+CREATE INDEX `IDX_file_url` ON `file` (`url`);
+[]
+CREATE INDEX `IDX_file_hotscore` ON `file` (`hotscore`);
+[]
+CREATE INDEX `IDX_file_cid` ON `file` (`cid`);
+[]
+CREATE INDEX `IDX_file_created` ON `file` (`created`);
+[]
+CREATE INDEX `IDX_file_hotness` ON `file` (`hotness`);
+[]
+CREATE INDEX `IDX_file_reply_count` ON `file` (`reply_count`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[image]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `image` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `fingerprint` TEXT NULL, `filename` TEXT NULL, `content` TEXT NULL, `hash` TEXT NULL, `location` TEXT NULL, `url` TEXT NULL, `size` INTEGER NULL, `width` INTEGER NULL, `height` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL); ]
+CREATE TABLE IF NOT EXISTS `image` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `uid` INTEGER NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `pid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `fingerprint` TEXT NULL, `filename` TEXT NULL, `content` TEXT NULL, `hash` TEXT NULL, `location` TEXT NULL, `url` TEXT NULL, `size` INTEGER NULL, `width` INTEGER NULL, `height` INTEGER NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`size`%') or (sql like '%[size]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hash`%') or (sql like '%[hash]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`pid`%') or (sql like '%[pid]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`url`%') or (sql like '%[url]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`cid`%') or (sql like '%[cid]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`fingerprint`%') or (sql like '%[fingerprint]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`width`%') or (sql like '%[width]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nid`%') or (sql like '%[nid]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`filename`%') or (sql like '%[filename]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`location`%') or (sql like '%[location]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`height`%') or (sql like '%[height]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[image]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[image]
+CREATE INDEX `IDX_image_nid` ON `image` (`nid`);
+[]
+CREATE INDEX `IDX_image_filename` ON `image` (`filename`);
+[]
+CREATE INDEX `IDX_image_updated` ON `image` (`updated`);
+[]
+CREATE INDEX `IDX_image_hotdown` ON `image` (`hotdown`);
+[]
+CREATE INDEX `IDX_image_hotvote` ON `image` (`hotvote`);
+[]
+CREATE INDEX `IDX_image_uid` ON `image` (`uid`);
+[]
+CREATE INDEX `IDX_image_hash` ON `image` (`hash`);
+[]
+CREATE INDEX `IDX_image_hotup` ON `image` (`hotup`);
+[]
+CREATE INDEX `IDX_image_views` ON `image` (`views`);
+[]
+CREATE INDEX `IDX_image_hotscore` ON `image` (`hotscore`);
+[]
+CREATE INDEX `IDX_image_author` ON `image` (`author`);
+[]
+CREATE INDEX `IDX_image_pid` ON `image` (`pid`);
+[]
+CREATE INDEX `IDX_image_ctype` ON `image` (`ctype`);
+[]
+CREATE INDEX `IDX_image_content` ON `image` (`content`);
+[]
+CREATE INDEX `IDX_image_location` ON `image` (`location`);
+[]
+CREATE INDEX `IDX_image_url` ON `image` (`url`);
+[]
+CREATE INDEX `IDX_image_cid` ON `image` (`cid`);
+[]
+CREATE INDEX `IDX_image_fingerprint` ON `image` (`fingerprint`);
+[]
+CREATE INDEX `IDX_image_created` ON `image` (`created`);
+[]
+CREATE INDEX `IDX_image_hotness` ON `image` (`hotness`);
+[]
+CREATE INDEX `IDX_image_reply_count` ON `image` (`reply_count`);
+[]
+SELECT name FROM sqlite_master WHERE type='table' and name = ?
+[timeline]
+BEGIN TRANSACTION
+len: 1
+create table sql: [ CREATE TABLE IF NOT EXISTS `timeline` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `author_signature` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL); ]
+CREATE TABLE IF NOT EXISTS `timeline` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `cid` INTEGER NULL, `nid` INTEGER NULL, `uid` INTEGER NULL, `order` INTEGER NULL, `ctype` INTEGER NULL, `title` TEXT NULL, `content` TEXT NULL, `attachment` TEXT NULL, `created` NUMERIC NULL, `updated` NUMERIC NULL, `hotness` REAL NULL, `hotup` INTEGER NULL, `hotdown` INTEGER NULL, `hotscore` INTEGER NULL, `hotvote` INTEGER NULL, `views` INTEGER NULL, `author` TEXT NULL, `author_signature` TEXT NULL, `category` TEXT NULL, `node` TEXT NULL, `reply_time` NUMERIC NULL, `reply_count` INTEGER NULL, `reply_last_user_id` INTEGER NULL, `reply_last_username` TEXT NULL, `reply_last_nickname` TEXT NULL);
+[]
+COMMIT
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`uid`%') or (sql like '%[uid]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`title`%') or (sql like '%[title]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotup`%') or (sql like '%[hotup]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`views`%') or (sql like '%[views]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author_signature`%') or (sql like '%[author_signature]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_username`%') or (sql like '%[reply_last_username]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_nickname`%') or (sql like '%[reply_last_nickname]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`nid`%') or (sql like '%[nid]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`updated`%') or (sql like '%[updated]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotdown`%') or (sql like '%[hotdown]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotscore`%') or (sql like '%[hotscore]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotvote`%') or (sql like '%[hotvote]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`author`%') or (sql like '%[author]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_last_user_id`%') or (sql like '%[reply_last_user_id]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`cid`%') or (sql like '%[cid]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`order`%') or (sql like '%[order]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`created`%') or (sql like '%[created]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`hotness`%') or (sql like '%[hotness]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`category`%') or (sql like '%[category]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`node`%') or (sql like '%[node]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_time`%') or (sql like '%[reply_time]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`reply_count`%') or (sql like '%[reply_count]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`id`%') or (sql like '%[id]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`ctype`%') or (sql like '%[ctype]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`content`%') or (sql like '%[content]%'))
+[timeline]
+SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`attachment`%') or (sql like '%[attachment]%'))
+[timeline]
+CREATE INDEX `IDX_timeline_nid` ON `timeline` (`nid`);
+[]
+CREATE INDEX `IDX_timeline_attachment` ON `timeline` (`attachment`);
+[]
+CREATE INDEX `IDX_timeline_updated` ON `timeline` (`updated`);
+[]
+CREATE INDEX `IDX_timeline_hotdown` ON `timeline` (`hotdown`);
+[]
+CREATE INDEX `IDX_timeline_hotvote` ON `timeline` (`hotvote`);
+[]
+CREATE INDEX `IDX_timeline_uid` ON `timeline` (`uid`);
+[]
+CREATE INDEX `IDX_timeline_title` ON `timeline` (`title`);
+[]
+CREATE INDEX `IDX_timeline_hotup` ON `timeline` (`hotup`);
+[]
+CREATE INDEX `IDX_timeline_views` ON `timeline` (`views`);
+[]
+CREATE INDEX `IDX_timeline_category` ON `timeline` (`category`);
+[]
+CREATE INDEX `IDX_timeline_node` ON `timeline` (`node`);
+[]
+CREATE INDEX `IDX_timeline_ctype` ON `timeline` (`ctype`);
+[]
+CREATE INDEX `IDX_timeline_content` ON `timeline` (`content`);
+[]
+CREATE INDEX `IDX_timeline_hotscore` ON `timeline` (`hotscore`);
+[]
+CREATE INDEX `IDX_timeline_author` ON `timeline` (`author`);
+[]
+CREATE INDEX `IDX_timeline_cid` ON `timeline` (`cid`);
+[]
+CREATE INDEX `IDX_timeline_created` ON `timeline` (`created`);
+[]
+CREATE INDEX `IDX_timeline_hotness` ON `timeline` (`hotness`);
+[]
+CREATE INDEX `IDX_timeline_author_signature` ON `timeline` (`author_signature`);
+[]
+CREATE INDEX `IDX_timeline_reply_count` ON `timeline` (`reply_count`);
+[]
+[xorm:cacheGet] find sql: SELECT `user`.`id` FROM  `user` WHERE role=? LIMIT 1 [-1000]
+SELECT `user`.`id` FROM  `user` WHERE role=? LIMIT 1
+[-1000]
+[xorm:cacheGet] query ids: []
+[xorm:cacheGet] cache ids: SELECT `user`.`id` FROM  `user` WHERE role=? LIMIT 1 []
+INSERT INTO `user` (`password`, `avatar`, `avatar_large`, `hotvote`, `views`, `username`, `nickname`, `msn`, `hotup`, `pid`, `content`, `hotscore`, `login_count`, `sex`, `created`, `hotdown`, `avatar_small`, `company`, `updated`, `province`, `role`, `last_login_time`, `last_login_ip`, `postcode`, `website`, `ctype`, `realname`, `avatar_medium`, `birth`, `city`, `weibo`, `hotness`, `email`, `address`, `mobile`, `qq`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[8d8efabb439d51cdbbc052b2f3032edeeedc6eda1df35fc2   0 0 root root  0 0  0 0 0 2014-06-15 21:15:50.030785769 -0500 CDT 0   2014-06-15 21:15:50.030793247 -0500 CDT  -1000 0001-01-01 00:00:00 +0000 UTC    0 root  0001-01-01 00:00:00 +0000 UTC   0 insion@sudochina.com   ]
+cache clear: user
+SELECT COUNT(`id`) AS `total` FROM `question` LIMIT 30
+[]
+SELECT `question`.`id` FROM  `question` ORDER BY `id` DESC LIMIT 30
+[]
+[xorm:cacheFind] cache ids: [] question SELECT `question`.`id` FROM  `question` ORDER BY `id` DESC LIMIT 30 []
+SELECT `reply`.`id` FROM  `reply` WHERE ctype=? ORDER BY `id` DESC LIMIT 8
+[1]
+[xorm:cacheFind] cache ids: [] reply SELECT `reply`.`id` FROM  `reply` WHERE ctype=? ORDER BY `id` DESC LIMIT 8 [1]

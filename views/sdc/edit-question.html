@@ -1,0 +1,134 @@
+{{template "sdc/head.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+<div class="error chromeframe">
+    您的浏览器版本 <strong>很旧很旧</strong>
+    ，为了正常地访问网站，请升级您的浏览器
+    <a target="_blank" href="http://browsehappy.com">立即升级</a>
+</div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container wrap">
+
+    <div class="row inner edge">
+        <div class="col-xs-12">
+            <h2 class="common-title">编辑问题</h2>
+        </div>
+        {{template "sdc/msgerr.html" .}}
+        <form id="ask" action="/edit/question/{{.question.Id}}/" method="post">
+            <div id="edit-main" class="col-xs-12 col-md-8">
+                <div id="content" class="edit-post">
+                    <div class="p">
+                        <label for="title" class="hid">标题</label>
+                        <input type="text" name="title" tabindex="1" class="form-control input-lg text-34" autocomplete="off" spellcheck="false" placeholder="标题，用一句话说清你的问题" value="{{.question.Title}}"/>
+                        {{if .xsrfdata}}{{.xsrfdata}}{{end}}
+                    </div>
+
+                    <div class="p">
+                        
+                        <label for="wmd-input" class="hid">内容</label>
+
+                        <textarea id="editor" class="form-control mono mousetrap textarea-14" name="content" tabindex="2" autocomplete="off" spellcheck="false" rows="15" style="display:none;">{{.question.Content}}</textarea>
+                        
+                        <div id="epiceditor" class="form-control mono mousetrap textarea-14" style="height:500px;"></div>
+                        {{template "sdc/editor-epiceditor-question.html".}}
+                    </div>
+                    {{/*
+                    <div id="wmd-preview" class="fmt preview"></div>
+                    */}}
+                </div>
+                <!-- end #content --> </div>
+            <!-- end #edit-main -->
+
+            <div id="edit-secondary" class="col-xs-12 col-md-4">
+                <aside class="warn edit-guide">
+                    <h3>提问指南</h3>
+                    <ul>
+                        <li>内容与技术相关，有明确的答案，有代码贴代码，附上已尝试过的解决方案</li>
+                        <li>良好排版，文明用语，克己奉公</li>
+                    </ul>
+                </aside>
+
+                <div class="tag-edit-form p q-info rounded-2">
+                    <h3 class="required">问题标签（至少 1 个）</h3>
+
+                {{if .question.Tags}}
+                    <ul class="tag-ranking-list show-pop-tag edit-disabled">
+                           {{$tags:=tags .question.Tags ","}}
+                              {{range $tags}}
+                                   <li>
+                                       <a href="/tag/{{.}}/" target="_blank" class="tag">{{.}}</a>
+                                   </li>
+                              {{end}}
+                    </ul>
+                {{end}}
+                    <ul class="tag-list show-pop-tag">
+                        <li class="add-tag">
+                            <select name="nodes" class="form-control pull-left text-28 w-xl mousetrap tag-input" id="v" onclick="javascript:adddiv(v.value);">
+                                {{if .nodes}}
+                                    {{if .inode}}
+                                    <option value="{{.inode.Title}}" selected>{{.inode.Title}} [默认]</option>
+                                    {{end}}
+                                    {{range .nodes}}
+                                    <option value="{{.Title}}">{{.Title}}</option>
+                                    {{end}}
+                                {{else}}
+                                    <option value="">尚无标签</option>
+                                {{end}}
+                            </select>
+                            <input type="button" class="btn btn-default btn-l tag-input-btn" value="选择" onclick="javascript:adddiv(v.value);"/>
+                        </li>
+                        <li class="add-tag">
+                            <input type="text" class="form-control pull-left text-28 w-xl mousetrap tag-input" autocomplete="off" tabindex="3"  placeholder="手动输入标签,如：golang" id="vv" value="{{if .question.Tags}}{{$tags:=tags .question.Tags ","}}{{range $tags}}{{.}},{{end}}{{end}}"/>
+                            <input type="button" class="btn btn-default btn-l tag-input-btn" value="添加" onclick="javascript:adddiv(vv.value);">
+                        </li>
+                    </ul>
+                    <script language="javascript">
+                        var count= 0 ;
+                        var max = 100;
+                        function adddiv(v) {
+                                if(count >= max)    return;//限制最多max个
+                                if(v=="")    return;//限制最多max个
+                                count++;
+                                //自增id不同的HTML对象，并附加到容器最后
+                                var newDiv ='<span style="margin:5px;display:inline-block;" id="elm' + count +'">'
+                                +'<a class="tag" title="'+v+'">'+v+',</a>'
+                                +'<input type="button" value="x" onclick=\'deldiv("elm' + count + '");\' class="button"/></span>';
+                                document.getElementById("divc").insertAdjacentHTML("beforeEnd", newDiv);
+                        }
+                        //删除指定元素
+                        function deldiv(diva) {
+                                count--;
+                                document.getElementById(diva).parentNode.removeChild(document.getElementById(diva));
+                        }
+                        function settags() {
+                            document.getElementById("tags").value = document.getElementById("divc").innerText;
+                            document.getElementById("ask").submit();
+                        }
+                    </script>
+                    <div id="divc"></div>
+                </div>
+                {{/*
+                <div class="p">
+                    <input type="checkbox" disabled>
+                    转发到新浪微博
+                    <a href="/user/settings?tab=auth" target="_blank" tabindex="6">绑定 &#8617;</a>
+                </div>
+                */}}
+                <div class="p">
+                    <input type="hidden" name="tags" id="tags"/>                
+                    <input type="button" onclick="settags();" class="btn btn-primary btn-lg btn-xl action w-xxl ask-q-submit" tabindex="7" value="提交问题" />                
+                </div>
+            </div>
+            <!-- end #edit-secondary -->
+        </form>
+    </div>
+
+</div>
+<!-- end .wrap -->
+{{template "sdc/footer.html".}}
+</body>
+</html>

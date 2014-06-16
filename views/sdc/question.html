@@ -1,0 +1,342 @@
+{{template "sdc/head-question.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+<div class="error chromeframe">
+    您的浏览器版本 <strong>很旧很旧</strong>
+    ，为了正常地访问SudoChina，请升级您的浏览器
+    <a target="_blank" href="http://browsehappy.com">立即升级</a>
+</div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container wrap">
+
+    <div class="row inner edge">
+        <div class="col-md-12">
+            <h1 class="top-title" data-id="{{.article.Id}}">{{if .article.Title}}{{str2html .article.Title}}{{end}}</h1>
+        </div>
+        <div id="main" class="col-md-9 col-xs-12">
+            <div id="question">
+                <article class="q-post" id="q-{{.article.Id}}" data-id="{{.article.Id}}">
+                    <div class="post-cell">
+                        <a href="###" class="post-big-vote" onclick='javascript:$.get("/like/question/{{.article.Id}}/?ver="+(new Date()).valueOf(), {Action:"get"}, function (data, textStatus){this;$("#qscore-{{.article.Id}}").html(data);});'>
+                            <span id="qscore-{{.article.Id}}">{{metric .article.Hotscore}}</span>
+                            赞
+                        </a>
+                        <a href="###" class="post-big-hate" data-toggle="tooltip" data-placement="right" rel="tooltip" title="谨慎使用" onclick='javascript:$.get("/hate/question/{{.article.Id}}/?ver="+(new Date()).valueOf(), {Action:"get"}, function (data, textStatus){this;$("#qscore-{{.article.Id}}").html(data);});'>贬</a>
+                        {{/*
+                        <a href="###" class="post-fav" data-toggle="tooltip" data-placement="right" rel="tooltip" title="关注并收藏">收藏</a>
+                        */}}
+                    </div>
+
+                    <div class="fmt post-content">
+                        <div>
+                          {{if .article.Content}}
+                                {{markdown .article.Content}}
+                          {{end}}
+                        </div>
+                    </div><!-- end .post-content -->
+
+                    <div class="post-foot">
+                        {{if and (or (eq .userrole -1000) (eq .article.Uid .userid)) .userid}}
+                                <div class="hor-tabs post-action">
+                                    <a href="/{{.article.Id}}/" class="i-link">链接</a>
+                                    <a href="/edit/question/{{.article.Id}}/" class="i-edit" data-toggle="tooltip" data-placement="bottom" rel="tooltip" title="" data-original-title="修改问题后回答者会收到提醒">修改</a>
+                                    <a href="/delete/question/{{.article.Id}}/" data-cancel="0" class="i-trash delete">删除</a>
+                                    {{/* <!-- <a href="#" class="i-flag">操作</a> --> */}}
+                                    {{if (and (or (eq .userrole -1000) (eq .article.Uid .userid)) (or (eq .article.Ctype 0) (eq .article.Ctype 1)))}}
+                                        <a href="/close/question/{{.article.Id}}/" data-cancel="-1" class="i-off close">关闭</a>
+                                    {{end}}
+                                    {{if and (or (eq .userrole -1000) (eq .article.Uid .userid)) (eq .article.Ctype -1)}}
+                                        <a href="/open/question/{{.article.Id}}/" data-cancel="1" class="i-off close">开放</a>
+                                    {{end}}
+                                </div>
+                        {{else}}
+                                <div class="hor-tabs post-action">
+                                    <a href="/{{.article.Id}}/" class="i-link">链接</a>
+                                    {{/* <!-- <a href="#" class="i-flag">操作</a> --> */}}
+                                </div>
+                        {{end}}
+                        <table class="post-parter">
+                            <tr>
+                                <td>
+                                    {{if .avatar}}
+                                        <a href="#/user/{{.article.Author}}/" tabindex="-1">
+                                            <img class="avatar-32" src="{{.avatar}}" alt="{{.username}}" />                       
+                                        </a>
+                                    {{else}}
+                                        <a href="#/user/{{.article.Author}}/" tabindex="-1">
+                                            <img class="avatar-32" src="http://sfault-avatar.b0.upaiyun.com/251/781/251781449-1030000000196133_small" alt="{{.username}}" />                        
+                                        </a>
+                                    {{end}}
+                                </td>
+                                <td class="post-author">
+                                    <h4>
+                                        {{/*<a href="/user/{{.article.Author}}/">{{.article.Author}}</a> <strong>145</strong>*/}}
+                                        <span>{{.article.Author}}</span>
+                                    </h4>
+                                    <p style="border-top:1px dotted gray;">{{timesince .article.Created}}提问</p>
+                                    {{if (ne (timesince .article.Updated) (timesince .article.Created))}}
+                                        <p style="border-top:1px dotted gray;">{{timesince .article.Updated}}更新</p>
+                                    {{end}}
+                                </td>
+                            </tr>
+                        </table>
+                        {{/*
+                        <ul class="comment-list">
+                            <li>
+                                <a class="more-comments" href="#" data-url="/api/comment?do=show&id=1010000000445711">显示评论 (6条)</a>
+                            </li>
+                        </ul>
+                        <!-- end .comment-list -->
+                        */}}
+                    </div><!-- end .post-foot -->
+                </article>
+                <div style="clear:both;"></div>
+            </div>
+            <!-- end #question -->
+
+            <div id="answer">
+                {{/*
+                <div class="hor-tabs right">
+                    <a class="current by-votes" href="#">得票数</a> <i></i>
+                    <a class="by-created" href="#">时间先后</a>
+                </div>
+                */}}
+                <h2 class="a-title">{{.article.ReplyCount}} 个回答</h2>
+                <!-- 
+                    <div class="iamgg-main rounded-2">        
+                <small>
+                    <a href="http://segmentfault.com/advertise">赞助商广告</a>
+                </small>
+                </div>
+                -->
+                {{$userrole:=.userrole}}
+                {{$auid:=.article.Uid}}
+                {{$aid:=.article.Id}}
+                {{$userid:=.userid}}
+                {{if .replys}}
+                    {{range .replys}}
+                        <article class="a-post accepted" id="answer-{{.Id}}" data-id="{{.Id}}" data-created="{{.Created}}" data-votes="{{.Hotvote}}">
+                            <div class="post-cell">
+                                <a href="###" class="post-big-vote" onclick='javascript:$.get("/like/answer/{{.Id}}/?ver="+(new Date()).valueOf(), {Action:"get"}, function (data, textStatus){this;$("#ascore-{{.Id}}").html(data);});'>
+                                    <span id="ascore-{{.Id}}">{{metric .Hotvote}}</span>
+                                    赞
+                                </a>
+                                <a href="###" class="post-big-hate" data-toggle="tooltip" data-placement="right" rel="tooltip" title="谨慎使用" onclick='javascript:$.get("/hate/answer/{{.Id}}/?ver="+(new Date()).valueOf(), {Action:"get"}, function (data, textStatus){this;$("#ascore-{{.Id}}").html(data);});'>贬</a>
+                        {{if eq .Ctype 2}}
+                                <div class="accept-mark" title="采纳答案">采纳</div>
+                        {{end}}
+                            </div>
+                            <div class="fmt post-content">
+                                <div>
+                                    {{if .Content}}{{markdown .Content}}{{end}}
+                                </div>
+                            </div><!-- end .post-content -->    
+                            <div class="post-foot">
+                                <div class="hor-tabs post-action">
+
+                                {{if and (or (eq $userrole -1000) (eq $auid $userid)) (ne .Ctype 2)}}
+                                            <a class="btn btn-default btn-sm btn-s btn-accept" data-cancel="0" href="/accept/answer/{{.Id}}/{{$aid}}/">采纳答案</a>
+                                            <i></i>
+                                {{end}}
+                                            <a href="/{{$aid}}/#answer-{{.Id}}" class="i-link">链接</a>
+                                            {{/*<!-- <a href="#" class="i-flag">操作</a> -->*/}}
+                                {{if and (or (eq $userrole -1000) (eq .Uid $userid)) $userid}}
+
+                                            <a href="/edit/answer/{{.Id}}/" class="i-edit" data-toggle="tooltip" data-placement="bottom" rel="tooltip" title="" data-original-title="修改答案后提问者会收到提醒">修改</a>
+                                            <a href="/delete/answer/{{.Id}}/{{$aid}}/" class="i-trash delete">删除</a>
+                                {{end}}
+
+                                {{if and (or (eq $userrole -1000) (eq $auid $userid)) $userid}}
+                                            <a class="i-ignore ignore" href="/ignore/answer/{{.Id}}/{{$aid}}/" data-cancel="0">忽略</a>
+                                {{end}}
+                                
+                                </div>
+
+                            <table class="post-parter">
+                                <tr>
+                                    <td>
+                                        <a href="#/user/{{.Author}}/" tabindex="-1">
+                                            <img class="avatar-32" src="{{gravatar .Email 32}}" alt="{{.Author}}" />    
+                                        </a>
+                                    </td>
+                                    <td class="post-author">
+                                        <h4>
+                                            {{/*<a href="/user/{{.article.Author}}/">{{.Author}}</a> <strong>145</strong>*/}}
+                                            <span>{{.Author}}</span>
+                                        </h4>
+                                        <p style="border-top:1px dotted gray;">{{timesince .Created}}回答</p>
+                                        {{if (ne (timesince .Updated) (timesince .Created))}}
+                                            <p style="border-top:1px dotted gray;">{{timesince .Updated}}更新</p>
+                                        {{end}}
+                                    </td>
+                                </tr>
+                            </table>
+                            {{/*
+                            <ul class="comment-list">
+                                <li>
+                                    <a class="more-comments" href="#" data-url="/api/comment?do=show&id=1020000000446113">显示评论 (2条)</a>
+                                </li>
+                            </ul>
+                            <!-- end .comment-list -->
+                            */}}
+                            </div>
+                        </article>
+                    {{end}}
+                {{end}}
+            </div><!-- end #answer -->
+
+            <div id="write-answer">
+                {{if (or (eq .article.Ctype 2) (eq .article.Ctype -1)) }}
+                    <h2 class="common-title">撰写答案</h2>
+                    <div class="p">
+                        <label for="wmd-input" class="hid">答案内容</label>
+                        <textarea id="wmd-input" class="form-control mono textarea-14 mousetrap fold" placeholder="为此问题提供一个答案" rows="8" autocomplete="off" spellcheck="false" name="content"></textarea>
+                    </div>
+                    <div class="login-warn">问题已关闭</div>
+                {{else}}
+                    {{if .userid}}
+                        <form method="post" action="/new/answer/{{.article.Id}}/" style="width:96%;margin:0 auto;">
+                            <h2 class="common-title">撰写答案</h2>
+                            <div class="p">
+                                <label for="wmd-input" class="hid">答案内容</label>
+                                <textarea id="editor" class="form-control mono textarea-14 mousetrap fold{{if (eq $userrole -1000)}} editor{{end}}" placeholder="为此问题提供一个答案" rows="10" autocomplete="off" spellcheck="false" name="content" style="display:none;"></textarea>
+                            </div>
+                            <div id="epiceditor" class="form-control mono textarea-14 mousetrap fold"></div>
+                            {{template "sdc/editor-epiceditor-answer.html".}}
+                            <div class="form-action"><div class="p">
+                                <span class="left">
+                                </span>
+                                <input type="submit" class="btn btn-primary btn-xl" value="提交答案">    
+                                <input type="hidden" value="{{.article.Id}}" name="id">
+                            </div></div>
+                        </form>
+                    {{else}}
+                        <h2 class="common-title">撰写答案</h2>
+
+                        <div class="p"> 
+                            <label for="wmd-input" class="hid">答案内容</label>
+                            <textarea id="wmd-input" class="form-control mono textarea-14 mousetrap fold" placeholder="为此问题提供一个答案" rows="8" autocomplete="off" spellcheck="false" name="content"></textarea>
+                        </div>
+                            <div class="login-warn">
+                                请先
+                                <a href="/user/signin/">登录</a>
+                                后撰写答案
+                            </div>
+                        {{end}}
+                {{end}}
+            </div><!-- end #write-answer -->
+        </div><!-- end #main -->
+
+        <div id="secondary" class="col-md-3 col-xs-12 hidden-xs hidden-sm">
+            <aside class="q-info">
+                <ul class="hor-count">
+                    <li>
+                        <strong>{{if .article.Views}}{{.article.Views}}{{else}}0{{end}}
+                                 <script type="text/javascript">
+                                                      $.get("/view/question/question/{{.article.Id}}/?ver="+(new Date()).valueOf(), function(data){
+                                                         $(".topic-views").html(data);
+                                                      });
+                                 </script>
+                        </strong>浏览数
+                    </li>
+                    {{/*
+                    <li>
+                        <strong>{{.article.FavoriteCount}}</strong>
+                        收藏数
+                    </li>
+                    */}}
+                </ul>
+
+                {{if .article.Tags}}
+                    <ul class="tag-ranking-list show-pop-tag edit-disabled">
+                           {{$tags:=tags .article.Tags ","}}
+                              {{range $tags}}
+                                   <li>
+                                       <a href="/tag/{{.}}/" class="tag">{{str2html .}}</a>
+                                    {{/*
+                                        <a data-tid="{{.article.Id}}" href="http://segmentfault.com/t/centos" class="tag tag-img" style="background-image: url(http://sfault-avatar.b0.upaiyun.com/122/905/1229053881-i-1040000000090249_icon);">centos</a>
+                                    */}}
+                                   </li>
+                              {{end}}
+                    </ul>
+                {{end}}
+            </aside>
+
+            {{/*
+            <div class="iamgg-sidebar rounded-2">
+                广告位置
+            </div>
+            */}}
+
+            {{/*
+                <div class="qa-aside-pin">
+
+                    <aside class="input-share box fix-top">
+                        <h3>转发分享</h3>
+                        <input title="本页网址" type="text" class="form-control input-sm mono text-27" readonly value="http://sfau.lt/bNb163" />
+                        <br />
+                        <a target="_blank" href="http://segmentfault.com/share/weibo/1010000000445711" class="i-weibo">微博</a>
+                        <a target="_blank" href="http://segmentfault.com/share/twitter/1010000000445711" class="i-twitter">Twitter</a>
+                        <a target="_blank" href="http://segmentfault.com/share/renren/1010000000445711" class="i-renren">人人网</a>
+                        <a target="_blank" href="http://segmentfault.com/share/qq/1010000000445711" class="i-tqq">腾讯微博</a>
+                        <a target="_blank" href="http://segmentfault.com/share/douban/1010000000445711" class="i-douban">豆瓣</a>
+                    </aside>
+
+
+                    <aside class="box fix-top">
+                        <h3 class="top-title">相关问题</h3>
+                        <ul class="link-list">
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000199885">centos新建用户后，登陆后为什么会有cd /root的操作？</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000095509">libcurl在64位centos下访问https错误</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000408882">CentOS下如何限制指定用户只能在指定IP登录？</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000385524">CentOS 下 有没有像 Homebrew的源 这样更新及时的源？</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000114764">centOS下设置Rabbitmq服务开机自动启动的方法？</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000095311">CentOS 下磁盘空间占用一直是100%，无法释放</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000336900">centos 6.4下tomcat6配置虚拟目录失败</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000330033">centos下wget: 无法解析主机地址</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000437507">centos下rpm命令无法使用，提示数据库损坏</a>
+                            </li>
+                            <li>
+                                <a href="http://segmentfault.com/q/1010000000334129">想要变身root用户的时候使用原有的Vim设置和插件,怎么搞?</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            */}}
+        </div><!-- end #secondary -->
+    </div>
+</div><!-- end .wrap -->
+
+{{/*
+<div class="container feed-link">
+    <a href="/feeds/{{.article.Id}}/">
+    <i class="i-feed"></i>
+    订阅本页 RSS
+    </a>
+</div>
+*/}}
+
+{{template "sdc/footer.html".}}
+</body>
+</html>

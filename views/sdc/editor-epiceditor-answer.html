@@ -1,0 +1,47 @@
+<script type="text/javascript" src="/static/editor/epiceditor/js/epiceditor.min.js"></script>
+<script type="text/javascript">
+var opts = {
+  container: 'epiceditor',
+  textarea:'editor',
+  basePath: '../../../../static/editor/epiceditor',
+  clientSideStorage: true,
+  localStorageName: 'epiceditor',
+  useNativeFullscreen: true,
+  parser: marked,
+  file: {
+    name: 'epiceditor',
+    defaultContent: '',
+    autoSave: 100
+  },
+  focusOnLoad: true,
+  theme: {
+    base: '/themes/base/epiceditor.css',
+    preview: '/themes/preview/preview-dark.css',
+    editor: '/themes/editor/epic-light.css'
+  },
+  button: {
+    preview: true,
+    fullscreen: true,
+    bar: "auto"
+  },
+  focusOnLoad: false,
+  shortcut: {
+    modifier: 18,
+    fullscreen: 70,
+    preview: 80
+  },
+  string: {
+    togglePreview: '进入预览模式',
+    toggleEdit: '进入编辑模式',
+    toggleFullscreen: '进入全屏模式'
+  },
+  autogrow: {
+    minHeight: 200
+  }
+}
+var editor = new EpicEditor(opts);
+editor.load(function () {
+  console.log("Markdown Editor loaded.")
+});
+
+</script>

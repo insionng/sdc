@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule"
+xmlns:re="http://purl.org/atompub/rank/1.0"
+xmlns:thr="http://purl.org/syndication/thread/1.0"
+xml:lang="zh-CN"
+>
+<title type="text">最新的问题 - SegmentFault</title>
+<subtitle type="text">专业面向开发者的中文技术问答社区</subtitle>
+<updated>2013-10-21T22:53:15+08:00</updated>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/" />
+<link rel="self" type="application/atom+xml" href="http://segmentfault.com/feeds" />
+<id>http://segmentfault.com/feeds</id>
+<creativeCommons:license>http://www.creativecommons.org/licenses/by-sa/2.5/rdf</creativeCommons:license>
+<entry>
+<title type="text">rails 始终无法加载 spreadsheet</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322884" />
+<id>http://segmentfault.com/q/1010000000322884</id>
+<updated>2013-10-21T22:14:29+08:00</updated>
+<published>2013-10-21T22:14:29+08:00</published>
+<author>
+<name>Tairy</name>
+<uri>http://segmentfault.com/u/tairy</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/ruby-on-rails" term="ruby-on-rails" />
+<category scheme="http://segmentfault.com/feeds/t/spreadsheet" term="spreadsheet" />
+<summary type="html">&lt;p&gt;已经运行过｀gem install spreadsheet｀可是在代码中｀require 'spreadsheet'｀的时候还是会报错：｀no such file to load -- spreadsheet｀求解是什么情况。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322884" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322884" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">javascript 传参数问题</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322896" />
+<id>http://segmentfault.com/q/1010000000322896</id>
+<updated>2013-10-21T22:53:15+08:00</updated>
+<published>2013-10-21T22:53:15+08:00</published>
+<author>
+<name>testcpast</name>
+<uri>http://segmentfault.com/u/testcpast</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/javascript-jquery" term="javascript-jquery" />
+<category scheme="http://segmentfault.com/feeds/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" term="web前端开发" />
+<summary type="html">&lt;p&gt;在写代码的时候，有时候需要将html拼成串，追加到相应的元素上，这个拼的html，有时候还要带上javascript的事件。这里面一个传参数的问题，有点想不明白。下面我详细记录一下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;//这是jqgrid里面，特殊表格的自定义显示
+function customFmatter(cellvalue, options, rowObject){  
+
+    // rowObject - 当前cell所在row的值，如{ id=1, name="name1", price=123.1, ...}
+    console.log(rowObject); 
+  return "&amp;lt;button  onclick=\"deleteData(\""+rowObject+"\"s)\"&amp;gt;删除&amp;lt;/buttion&amp;gt; "
+}
+
+function deleteData(obj){
+console.log(obj); //这里的obj就不是上一个方法里面的obj了。
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这种情况下，传递Object不可以这样拼吗？
+我试着改成JSON.stringify(rowObject)以串的形式传给deleteData方法，但是因为这个对象
+也是有双引号，所以这样弄，就会报&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Uncaught SyntaxError: Unexpected token ILLEGAL&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;总结一下，应该是两个问题：
+1.在dom事件中，传递object会有什么特殊的规则吗？
+2.对于传递的数据中，有可能出现的特殊字符，如果避免？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322896" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322896" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">js 实现类似于按住ctrl键然后点击链接功能</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322857" />
+<id>http://segmentfault.com/q/1010000000322857</id>
+<updated>2013-10-21T20:44:17+08:00</updated>
+<published>2013-10-21T20:44:17+08:00</published>
+<author>
+<name>朱其鹏</name>
+<uri>http://segmentfault.com/u/zhuqipeng</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/jquery" term="jquery" />
+<summary type="html">&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;按住 ctrl键,然后点击链接,打开新标签页,但不跳到新标签页中, 这样的功能用js应该怎么实现&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322857" thr:count="2" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322857" thr:count="2"/>
+</entry>
+<entry>
+<title type="text">Java的反射 和 泛型的一个问题</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322867" />
+<id>http://segmentfault.com/q/1010000000322867</id>
+<updated>2013-10-21T21:23:41+08:00</updated>
+<published>2013-10-21T21:23:41+08:00</published>
+<author>
+<name>丁亚光</name>
+<uri>http://segmentfault.com/u/dingyaguang</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/java" term="java" />
+<category scheme="http://segmentfault.com/feeds/t/morphia" term="morphia" />
+<summary type="html">&lt;p&gt;大概摘要一些在这里&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Class clazz = this.getClass();
+UpdateOperations up = ds.createUpdateOperations(clazz);
+ds.update(ds.createQuery(clazz).filter("_id",id), up);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完整的在
+&lt;a rel="nofollow" href="https://github.com/mongodb/morphia/issues/542"&gt;https://github.com/mongodb/morphia/issues/542&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;mophia是一个mongodb 的ORM框架，然后我在一个基类里写了一个update方法，
+希望可以动态根据子类类型，利用反射完成一些更新任务。&lt;/p&gt;
+
+&lt;p&gt;但是morphia的update方法有两个泛型方法：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;T update(T,UpdateOperations&amp;lt;T&amp;gt;  
+
+T update(Query&amp;lt;T&amp;gt;,UpdateOperations&amp;lt;T&amp;gt;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;我在用ant编译的时候报错了，提示说
+ds.update(ds.createQuery(clazz).filter("_id",id), up);
+匹配了以上2个方法，有歧义。
+最奇怪的是eclipse调试什么的都没问题，只是一个unchecked的警告而已：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Type safety: Unchecked invocation update(Query, UpdateOperations) of the generic method update(Query&lt;T&gt;, UpdateOperations&lt;T&gt;) of type Datastore&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;而且可以从警告看出，是匹配了上面第二个update方法。&lt;/p&gt;
+
+&lt;p&gt;不知道应该怎么解决，是不是编译的时候要设置一些参数呢？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322867" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322867" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">横向滚动条问题求救</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322844" />
+<id>http://segmentfault.com/q/1010000000322844</id>
+<updated>2013-10-21T19:32:57+08:00</updated>
+<published>2013-10-21T19:32:57+08:00</published>
+<author>
+<name>林林要做世界</name>
+<uri>http://segmentfault.com/u/linlinyaozuoshijie</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/html" term="html" />
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/css" term="css" />
+<category scheme="http://segmentfault.com/feeds/t/jquery" term="jquery" />
+<category scheme="http://segmentfault.com/feeds/t/%E6%BB%9A%E5%8A%A8%E6%9D%A1" term="滚动条" />
+<summary type="html">&lt;p&gt;现有一个背景div #background, width=1400px ，其子结点有一个内容div #content width不定，可能很长  ，现在横向滚动条是对应background的，但是当content的width很大时，滚动条依然只能拖动到1400px处，如何令其能够拖动到适应content的宽度？
+apDiv1就是content&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; #background {
+    background-image: url("../images/background/rain2.jpg");
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height: 100%;
+    position: absolute;
+    overflow-x: visible;
+    overflow-y: hidden;
+    z-index: 20;
+｝
+
+#apDiv1 {
+    position: absolute;
+    left: 1000px;
+    top: 0px;
+    width:100%;
+    height: 100%;
+    background-color: rgba(240,240,240,0.9); 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index:22;
+｝
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;![]&lt;img src="http://segmentfault.com/img/bVbv9i" alt="请输入图片描述" /&gt;&lt;/p&gt;
+
+&lt;p&gt;上图是一个小部分的截图，可以看到那个滚动条已经不能再继续滚动了，但其实这个div还有很多内容显示不了
+    请问：如何能够解决这个问题？好人一生平安&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322844" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322844" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">搜索引擎和爬虫的区别？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322643" />
+<id>http://segmentfault.com/q/1010000000322643</id>
+<updated>2013-10-21T10:58:27+08:00</updated>
+<published>2013-10-21T10:58:27+08:00</published>
+<author>
+<name>Charles</name>
+<uri>http://segmentfault.com/u/charles_305995</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E" term="搜索引擎" />
+<summary type="html">&lt;p&gt;我的理解是爬虫是搜索引擎的一部分，负责信息的采集。
+搜索引擎其他两个部分应该还包括语义分析和全文索引，不知道我这样的理解对不对？&lt;/p&gt;
+
+&lt;p&gt;还有请问下现有的开源搜索引擎包含了爬虫部分吗？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322643" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322643" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">搜狗浏览器到底在做什么？这是流氓行为吗？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000257032" />
+<id>http://segmentfault.com/q/1010000000257032</id>
+<updated>2013-07-23T10:54:51+08:00</updated>
+<published>2013-07-23T10:54:51+08:00</published>
+<author>
+<name>zhcexo</name>
+<uri>http://segmentfault.com/u/zhcexo</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">-1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<summary type="html">&lt;p&gt;公司负责维护的一位同事发现的，我们的页面很多地方都被注入了JS代码，这段代码展开了如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    (function (sogouExplorer) {
+    sogouExplorer.extension.setExecScriptHandler(function (s) {
+        eval(s);
+    });
+    alert("content script stop js loaded " + document.location);
+    if (typeof comSogouWwwStop == "undefined") {
+        var SERVER = "http://ht.www.sogou.com/websearch/features/yun1.jsp?pid=sogou-brse-596dedf4498e258e&amp;amp;";
+        window.comSogouWwwStop = true;
+        setTimeout(function () {
+            if (!document.location || document.location.toString().indexOf(SERVER) != 0) {
+                return;
+            }
+
+            function bind(elem, evt, func) {
+                if (elem) {
+                    return elem.addEventListener ? elem.addEventListener(evt, func, false) : elem.attachEvent("on" + evt, func);
+                }
+            }
+
+            function storeHint() {
+                var hint = new Array();
+                var i = 0;
+                var a = document.getElementById("hint_" + i);
+                var b = document.getElementById("hint_text_" + i);
+                var storeClick = function () {
+                    sogouExplorer.extension.sendRequest({
+                        cmd: "click"
+                    });
+                }
+                while (a &amp;amp;&amp;amp; b) {
+                    bind(a, "click", storeClick);
+                    hint.push({
+                        "text": b.innerHTML,
+                        "url": a.href
+                    });
+                    i++;
+                    a = document.getElementById("hint_" + i);
+                    b = document.getElementById("hint_text_" + i);
+                }
+                return hint;
+            }
+            if (document.getElementById("windowcloseit")) {
+                document.getElementById("windowcloseit").onclick = function () {
+                    sogouExplorer.extension.sendRequest({
+                        cmd: "closeit"
+                    });
+                }
+                var flag = false;
+                document.getElementById("bbconfig").onclick = function () {
+                    flag = true;
+                    sogouExplorer.extension.sendRequest({
+                        cmd: "config"
+                    });
+                    return false;
+                }
+                document.body.onclick = function () {
+                    if (flag) {
+                        flag = false;
+                    } else {
+                        sogouExplorer.extension.sendRequest({
+                            cmd: "closeconfig"
+                        });
+                    }
+                };
+                document.getElementById("bbhidden").onclick = function(){
+                    sogouExplorer.extension.sendRequest({cmd: "hide"});
+                    return false;
+                }
+                var sogoutip = document.getElementById("sogoutip");
+                var tip = {};
+                tip.word = sogoutip.innerHTML;
+                tip.config = sogoutip.title.split(",");
+                var hint = storeHint();
+                sogouExplorer.extension.sendRequest({
+                    cmd: "show",
+                    data: {
+                        hint: hint,
+                        tip: tip
+                    }
+                });
+            } else {
+                if (document.getElementById("windowcloseitnow")) {
+                    sogouExplorer.extension.sendRequest({
+                        cmd: "closeit",
+                        data: true
+                    });
+                }
+            }
+        }, 1);
+    }
+})(window.external.sogouExplorer(window, 8));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;好像使用了FCKEditor这种编辑器和搜狗浏览器的时候会发生这种事情？这算流氓行为吗？搜狗在统计什么？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000257032" thr:count="6" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000257032" thr:count="6"/>
+</entry>
+<entry>
+<title type="text">请问有没有可能自己解析mysql的ibdata文件？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322791" />
+<id>http://segmentfault.com/q/1010000000322791</id>
+<updated>2013-10-21T17:00:31+08:00</updated>
+<published>2013-10-21T17:00:31+08:00</published>
+<author>
+<name>柿子树上的茶叶</name>
+<uri>http://segmentfault.com/u/shizishushangdechaye</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/mysql" term="mysql" />
+<category scheme="http://segmentfault.com/feeds/t/%E5%AE%89%E5%85%A8" term="安全" />
+<summary type="html">&lt;p&gt;比如，我从那个ibdata中发现了下面这些数据。我认为这些数据是一张名为test的表产生的，而且我做了测试证明了这个猜测（这个测试就是我在往这个表中插入新的数据后这一部分的数据也会发生相应的变化）。
+关于test表，其建表语句如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;create table 搜索test (id int, MSGCONTENT VARCHAR(50));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;下面这些数据是我往该表中插入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;insert into test values(1, "abcd");
+insert into test values(2, "efgh");
+insert into test values(3, "ijkl");
+insert into test values(4, "mnop");
+insert into test values(5, "qrst");
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;得到的
+（为了分开真正的数据部分和其它信息，我在下面这些数据的某一处换了一行）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;6f67 6298 05f5 767e
+aa7c e54e 0000 0703 ffff ffff ffff ffff
+0000 0000 05f5 76b9 45bf 0000 0000 0000
+0000 0000 0000 0002 0122 8007 0000 0000
+0107 0002 0004 0005 0000 0000 0000 0000
+0000 0000 0000 0000 0052 0000 0000 0000
+0209 33f2 0000 0000 0000 0209 06f2 0100
+0200 1c69 6e66 696d 756d 0006 000b 0000
+7375 7072 656d 756d 0400 0000 1000 2200
+0000 0179 c200 0000 0172 8dd2 0000 01cc
+0110 8000
+          0001 6162 6364 0400 0000 1800
+2200 0000 0179 c300 0000 0172 8ed3 0000
+0192 0110 8000 0002 6566 6768 0400 0000
+2000 2200 0000 0179 c400 0000 0172 8fd4
+0000 01cd 0110 8000 0003 696a 6b6c 0400
+0000 2800 2200 0000 017a 0000 0000 0176
+0182 0000 0139 0110 8000 0004 6d6e 6f70
+0400 0000 30ff 6900 0000 017a 0100 0000
+0176 0384 0000 0704 0110 8000 0005 7172
+7374 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;在往test表中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;insert into test values(6, "uvwx");
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;后，&lt;code&gt;ibdata&lt;/code&gt; 文件中的相应部分变成了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;02ad 8153 05f5 7724
+35d5 0778 0000 0703 ffff ffff ffff ffff
+0000 0000 05f5 771d 45bf 0000 0000 0000
+0000 0000 0000 0002 0144 8008 0000 0000
+0129 0002 0005 0006 0000 0000 0000 0000
+0000 0000 0000 0000 0052 0000 0000 0000
+0209 33f2 0000 0000 0000 0209 06f2 0100
+0200 1c69 6e66 696d 756d 0007 000b 0000
+7375 7072 656d 756d 0400 0000 1000 2200
+0000 0179 c200 0000 0172 8dd2 0000 01cc
+0110 8000
+          0001 6162 6364 0400 0000 1800
+2200 0000 0179 c300 0000 0172 8ed3 0000
+0192 0110 8000 0002 6566 6768 0400 0000
+2000 2200 0000 0179 c400 0000 0172 8fd4
+0000 01cd 0110 8000 0003 696a 6b6c 0400
+0000 2800 2200 0000 017a 0000 0000 0176
+0182 0000 0139 0110 8000 0004 6d6e 6f70
+0400 0000 3000 2200 0000 017a 0100 0000
+0176 0384 0000 0704 0110 8000 0005 7172
+7374 0400 0000 38ff 4700 0000 017a 0200
+0000 0176 0586 0000 0168 0110 8000 0006
+7576 7778 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+0000 0000 0000 0000 0000 0000 0000 0000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;有没有人能告诉我那些非数据部分的字段代表什么含义？&lt;/p&gt;
+
+&lt;p&gt;比如：&lt;/p&gt;
+
+&lt;p&gt;我猜测第5行第4个4字节可能表示的是表中的记录数。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322791" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322791" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">TP-LINK TL-WR2041N 路由器能不乱修改 TTL 值吗？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322777" />
+<id>http://segmentfault.com/q/1010000000322777</id>
+<updated>2013-10-21T16:34:51+08:00</updated>
+<published>2013-10-21T16:34:51+08:00</published>
+<author>
+<name>依云</name>
+<uri>http://segmentfault.com/u/lilydjwg</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E7%BD%91%E7%BB%9C" term="网络" />
+<category scheme="http://segmentfault.com/feeds/t/%E8%B7%AF%E7%94%B1%E5%99%A8" term="路由器" />
+<summary type="html">&lt;p&gt;如题。我要 traceroute 功能，不要 30 排星号……&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322777" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322777" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">动态调试别人写好的apk就像od调试exe一样，有可行方案吗？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322421" />
+<id>http://segmentfault.com/q/1010000000322421</id>
+<updated>2013-10-20T20:55:58+08:00</updated>
+<published>2013-10-20T20:55:58+08:00</published>
+<author>
+<name>sunan</name>
+<uri>http://segmentfault.com/u/sunan</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/android" term="android" />
+<summary type="html">&lt;p&gt;我看网上有教程用ida调试android上的程序，但是貌似非虫大侠说，那个不能调试apk。
+俺反正是成功运行了，但是run不起来apk，但是能attach上apk，然后就两眼一抹黑了。
+哪位有成功的经验呢？
+用ida或者od或者其他的工具，动态的跟踪apk。&lt;/p&gt;
+
+&lt;p&gt;当然反编译称smail或者.java之类的，就不用说了。那个已经搞定了。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322421" thr:count="2" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322421" thr:count="2"/>
+</entry>
+<entry>
+<title type="text">使用django admin  在保存对一个model的修改的时候 怎么能同时触发一个我自己定义的函数呢?</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322759" />
+<id>http://segmentfault.com/q/1010000000322759</id>
+<updated>2013-10-21T15:39:09+08:00</updated>
+<published>2013-10-21T15:39:09+08:00</published>
+<author>
+<name>Yiner</name>
+<uri>http://segmentfault.com/u/yiner</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/django" term="django" />
+<summary type="html">&lt;p&gt;使用django admin  在保存对一个model的修改的时候 怎么能同时触发一个我自己定义的函数呢?&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322759" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322759" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">如何在 javascript 中实现 unload 延迟跳转 或 有效的不访问网络、不抢光 CPU 的 sleep 方法？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322740" />
+<id>http://segmentfault.com/q/1010000000322740</id>
+<updated>2013-10-21T14:07:04+08:00</updated>
+<published>2013-10-21T14:07:04+08:00</published>
+<author>
+<name>黄弘</name>
+<uri>http://segmentfault.com/u/hongs</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/html" term="html" />
+<category scheme="http://segmentfault.com/feeds/t/web" term="web" />
+<category scheme="http://segmentfault.com/feeds/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" term="web前端开发" />
+<summary type="html">&lt;p&gt;最近开发一个项目遇到个问题，需要实现在页面跳转前，发送多个跟踪请求。由于跳转的过程不受我们控制，也不想干预客户网站的代码，所以不能通过跟踪请求完成后回调网站代码来实现。&lt;/p&gt;
+
+&lt;p&gt;我的想法就是在跟踪发起时给某个计数器加 1，在每个跟踪结束时给计数器减 1；unload 里判断计数器的值，不等于 0 就 sleep 一些毫秒，等于 0 就返回，unload 就可以继续了。前提是：1.有 sleep 函数 2.sleep 是同步的（阻塞的）&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;请问有何办法可以实现？当然如果有其他的能实现 unload 延迟（不能弹框哦）的方法也请告知，谢谢了。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;注：何为跟踪请求：
+就是为了监测页面或商业效果，将页面或商品的一些参数发往不同的监测系统，通常利用 new Image() 来发送（跨域）。&lt;/em&gt;&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322740" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322740" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">mac下sublime text2无法保存加载的project</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322692" />
+<id>http://segmentfault.com/q/1010000000322692</id>
+<updated>2013-10-21T12:52:45+08:00</updated>
+<published>2013-10-21T12:52:45+08:00</published>
+<author>
+<name>Anleb</name>
+<uri>http://segmentfault.com/u/anleb</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/sublime-text" term="sublime-text" />
+<summary type="html">&lt;p&gt;环境：mac&lt;br /&gt;
+工具：sublime text2&lt;br /&gt;
+问题：当我add-folder-project时，可以加载进来，但是 点击退出sublime后，再次打开时，原来加载的Project没了，还必须重新add加载。。。&lt;/p&gt;
+
+&lt;p&gt;跪求答案&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322692" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322692" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">新手学数据结构，求推荐书籍或者方法。</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322305" />
+<id>http://segmentfault.com/q/1010000000322305</id>
+<updated>2013-10-20T13:02:33+08:00</updated>
+<published>2013-10-20T13:02:33+08:00</published>
+<author>
+<name>大水</name>
+<uri>http://segmentfault.com/u/dashui</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E7%BC%96%E7%A8%8B" term="编程" />
+<summary type="html">&lt;p&gt;现在在学的是耿国华编的用C描述的数据结构这一本书。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322305" thr:count="2" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322305" thr:count="2"/>
+</entry>
+<entry>
+<title type="text">请问样式图片的缓存是多久更新一次？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322344" />
+<id>http://segmentfault.com/q/1010000000322344</id>
+<updated>2013-10-20T16:29:39+08:00</updated>
+<published>2013-10-20T16:29:39+08:00</published>
+<author>
+<name>Leckie-</name>
+<uri>http://segmentfault.com/u/leckie</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/php" term="php" />
+<summary type="html">&lt;p&gt;刚刚利用php上传了新的图片到buket
+前端的图片src都是 xxx.png-200 ，用的是qiniu的样式格式。
+但是前端图片仍然是旧的图片，虽然已经上传了新的图片上去。&lt;/p&gt;
+
+&lt;p&gt;所以想到应该是缓存的问题。请问样式图片的缓存是持续多久的？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322344" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322344" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">iOS7中，使用applicationCache之后，导致history.back()出现问题，怎么破？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322651" />
+<id>http://segmentfault.com/q/1010000000322651</id>
+<updated>2013-10-21T11:08:58+08:00</updated>
+<published>2013-10-21T11:08:58+08:00</published>
+<author>
+<name>Libo</name>
+<uri>http://segmentfault.com/u/libo</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/ios7" term="ios7" />
+<category scheme="http://segmentfault.com/feeds/t/webapp" term="webapp" />
+<category scheme="http://segmentfault.com/feeds/t/hash" term="hash" />
+<category scheme="http://segmentfault.com/feeds/t/application-cache" term="application-cache" />
+<summary type="html">&lt;p&gt;相关文献：&lt;a rel="nofollow" href="http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review"&gt;http://www.mobilexweb.com/blog/safari-ios7-html5-problems-apis-review&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If you are using Application Cache and also managing states through hash or other technique, the history object will not keep your navigation history, therefore history.back() will never work and history.length stays in 1 forever. (Thanks to 10+ people who reported this problem!)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我们这有个项目用了ApplicationCache、在Android和iOS7以下版本都能正常history.back()在不同hash值中跳转。但是在iOS7里面，后退按钮失效了。&lt;/p&gt;
+
+&lt;p&gt;整个项目用了ApplicationCache做离线缓存，暂时有个方案就是把ApplicationCache全部改为用localstorage来存储。不过这个工作量略大，求其他方案。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322651" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322651" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">如何使用python 来获得youku的&amp;lt;video&amp;gt;标签</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322646" />
+<id>http://segmentfault.com/q/1010000000322646</id>
+<updated>2013-10-21T11:00:28+08:00</updated>
+<published>2013-10-21T11:00:28+08:00</published>
+<author>
+<name>zxm99888</name>
+<uri>http://segmentfault.com/u/zxm99888</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/python" term="python" />
+<category scheme="http://segmentfault.com/feeds/t/%E7%BD%91%E9%A1%B5%E7%88%AC%E8%99%AB" term="网页爬虫" />
+<category scheme="http://segmentfault.com/feeds/t/ios" term="ios" />
+<category scheme="http://segmentfault.com/feeds/t/objective-c" term="objective-c" />
+<category scheme="http://segmentfault.com/feeds/t/html5" term="html5" />
+<summary type="html">&lt;p&gt;IOS 开发中可以使用&lt;code&gt;document.getElementsByTagName(\"video\")[0]).src&lt;/code&gt;来获得,&lt;br /&gt;
+ 请问python 如何获得我通过safari 模拟iPhone,返回得HTML文件中没有看到&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;标签, python可以通过类似iOS中的webView 来获得&lt;code&gt;&amp;lt;video&amp;gt;&lt;/code&gt;标签么？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322646" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322646" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">怎么用xml传输html？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322620" />
+<id>http://segmentfault.com/q/1010000000322620</id>
+<updated>2013-10-21T10:35:30+08:00</updated>
+<published>2013-10-21T10:35:30+08:00</published>
+<author>
+<name>znlyj</name>
+<uri>http://segmentfault.com/u/znlyj</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">-1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/java" term="java" />
+<category scheme="http://segmentfault.com/feeds/t/xml" term="xml" />
+<category scheme="http://segmentfault.com/feeds/t/html" term="html" />
+<summary type="html">&lt;p&gt;问题是这样的，公司内部服务器之间数据传输协议时xml，我现在需要用serverA请求serverB，发送用户注册邮件，邮件模板里面有html代码，serverB在收到请求数据后，由于html中有&amp;lt;、&gt;等特殊符号的缘故，导致xml无法解析，一时不知道怎么办，各位有解决办法木有？&lt;/p&gt;
+
+&lt;p&gt;如果在发送端不对html代码进行任何处理，接收到解析就会异常：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[Fatal Error] :1:1: Content is not allowed in prolog.
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322620" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322620" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">如何加密网页</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322593" />
+<id>http://segmentfault.com/q/1010000000322593</id>
+<updated>2013-10-21T10:11:14+08:00</updated>
+<published>2013-10-21T10:11:14+08:00</published>
+<author>
+<name>TexasCaptain</name>
+<uri>http://segmentfault.com/u/texascaptain</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">-1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/php" term="php" />
+<category scheme="http://segmentfault.com/feeds/t/%E4%BB%A3%E7%A0%81%E5%8A%A0%E5%AF%86" term="代码加密" />
+<summary type="html">&lt;p&gt;有些网页我们打开，用chrome的显示代码的功能就能看到网页用到的代码，但是有些网页我们看到的是乱码，是因为加密过了吗？请教高手解答，比如用什么方式加密，如何实现加密，谢谢。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322593" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322593" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">怎么 安装七牛镜像存储 WordPress 插件</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322494" />
+<id>http://segmentfault.com/q/1010000000322494</id>
+<updated>2013-10-21T00:07:10+08:00</updated>
+<published>2013-10-21T00:07:10+08:00</published>
+<author>
+<name>zgh1682001</name>
+<uri>http://segmentfault.com/u/zgh1682001</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E4%B8%83%E7%89%9B%E4%BA%91%E5%AD%98%E5%82%A8" term="七牛云存储" />
+<summary type="html">&lt;p&gt;七牛镜像存储 WordPress 插件 文件上传到哪里啊 我是新手能详细解释下吗  &lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322494" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322494" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">新浪微博登陆页一按[Tab]键就定位到登陆框是怎么做到的？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322527" />
+<id>http://segmentfault.com/q/1010000000322527</id>
+<updated>2013-10-21T08:56:14+08:00</updated>
+<published>2013-10-21T08:56:14+08:00</published>
+<author>
+<name>Alvin</name>
+<uri>http://segmentfault.com/u/alvinxu</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" term="web前端开发" />
+<summary type="html">&lt;p&gt;打开新浪微博:&lt;a rel="nofollow" href="http://weibo.com"&gt;http://weibo.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;未登陆状态下，会见到以下页面：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://segmentfault.com/img/bVbv4b" alt="新浪微博首页" /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后按[Tab]键，网页会自动帮你定位到登陆区的input(邮箱/账号/手机号)。&lt;/p&gt;
+
+&lt;p&gt;想请问，这是怎么做到的？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322527" thr:count="3" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322527" thr:count="3"/>
+</entry>
+<entry>
+<title type="text">电商网站的购物车的价格统计是前端计算，还是后台计算？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322252" />
+<id>http://segmentfault.com/q/1010000000322252</id>
+<updated>2013-10-20T10:10:32+08:00</updated>
+<published>2013-10-20T10:10:32+08:00</published>
+<author>
+<name>NightBear</name>
+<uri>http://segmentfault.com/u/nightbear</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<category scheme="http://segmentfault.com/feeds/t/json" term="json" />
+<category scheme="http://segmentfault.com/feeds/t/web%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91" term="web前端开发" />
+<category scheme="http://segmentfault.com/feeds/t/php" term="php" />
+<summary type="html">&lt;p&gt;添加了商品到购物车后，就会自动统计价格，显示总价格！那这个统计价格功能是通过前端js计算的，还是把每个产品的id以及数量传给后台，计算完再返回给前端页面呢？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322252" thr:count="4" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322252" thr:count="4"/>
+</entry>
+<entry>
+<title type="text">关于solr等搜索引擎的疑问？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322556" />
+<id>http://segmentfault.com/q/1010000000322556</id>
+<updated>2013-10-21T09:19:40+08:00</updated>
+<published>2013-10-21T09:19:40+08:00</published>
+<author>
+<name>Charles</name>
+<uri>http://segmentfault.com/u/charles_305995</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E" term="搜索引擎" />
+<summary type="html">&lt;p&gt;我现在想从网上爬特定关键词的网页，目前还没有目标网站，想请问下solr这样的搜索引擎支持没有目标网站的爬取了，爬取的效率大概怎么样？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322556" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322556" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">《算法导论》把上面的习题都做做完，需要多长时间，做完后会到一个什么样的水准呢？完</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322260" />
+<id>http://segmentfault.com/q/1010000000322260</id>
+<updated>2013-10-20T11:00:15+08:00</updated>
+<published>2013-10-20T11:00:15+08:00</published>
+<author>
+<name>胡义东</name>
+<uri>http://segmentfault.com/u/huyidong</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/php-%E7%AE%97%E6%B3%95" term="php-算法" />
+<category scheme="http://segmentfault.com/feeds/t/php" term="php" />
+<summary type="html">&lt;p&gt;《算法导论》把上面的习题都做完，需要多长时间，做完后会到一个什么样的水准呢？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322260" thr:count="3" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322260" thr:count="3"/>
+</entry>
+<entry>
+<title type="text">php null 引用计数归0问题</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322416" />
+<id>http://segmentfault.com/q/1010000000322416</id>
+<updated>2013-10-20T20:36:33+08:00</updated>
+<published>2013-10-20T20:36:33+08:00</published>
+<author>
+<name>在低诉</name>
+<uri>http://segmentfault.com/u/zaidisu</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">1</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/php" term="php" />
+<summary type="html">&lt;p&gt;网上很多说$a = null 是直接将$a 指向的数据结构置空，同时将其引用计数归0。&lt;/p&gt;
+
+&lt;p&gt;但是我的测试发现，并没有归0，代码如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$s=str_repeat('1',2);  //这和第二个例子完全相同  
+$p=&amp;amp;$s;  
+$s=null;  
+xdebug_debug_zval('s', 'p');
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;打印输出：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;s:
+
+(refcount=2, is_ref=1),null
+
+p:
+
+(refcount=2, is_ref=1),null
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其中的refcount还是2，并没有归为0，不知道为什么会这样&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322416" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322416" thr:count="1"/>
+</entry>
+<entry>
+<title type="text">ubuntu 桌面版 的 virtualbox   桥接 ubuntuServer  怎么 配置网络呢</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322275" />
+<id>http://segmentfault.com/q/1010000000322275</id>
+<updated>2013-10-20T11:28:18+08:00</updated>
+<published>2013-10-20T11:28:18+08:00</published>
+<author>
+<name>钟晓骏</name>
+<uri>http://segmentfault.com/u/zhongxiaojun</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/virtualbox" term="virtualbox" />
+<category scheme="http://segmentfault.com/feeds/t/ubuntu" term="ubuntu" />
+<category scheme="http://segmentfault.com/feeds/t/linux" term="linux" />
+<category scheme="http://segmentfault.com/feeds/t/%E7%BD%91%E7%BB%9C" term="网络" />
+<category scheme="http://segmentfault.com/feeds/t/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C" term="计算机网络" />
+<summary type="html">&lt;p&gt;ubuntu 桌面版 的 virtualbox   桥接 ubuntuServer  桌面配置网络呢 &lt;/p&gt;
+
+&lt;p&gt;我的是ubuntu12.04LTS . 我现在用的是virtualbox ,我在 virtualbox 里面安装了ubuntuServer ,我用 nat 连接的话,只能 虚拟机 ping 宿主机,但是宿主机ping 不了 虚拟机.
+端口转发也没用.. &lt;/p&gt;
+
+&lt;p&gt;于是我准备用 桥接的方式来 配置, 但是该怎么配置呢, 配置了. google 出来的那些 博文 都每一个成功了的.. 
+请各位大侠指教. &lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322275" thr:count="3" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322275" thr:count="3"/>
+</entry>
+<entry>
+<title type="text">如何方便的在linux上分发Redis</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322185" />
+<id>http://segmentfault.com/q/1010000000322185</id>
+<updated>2013-10-19T21:15:26+08:00</updated>
+<published>2013-10-19T21:15:26+08:00</published>
+<author>
+<name>徐牛</name>
+<uri>http://segmentfault.com/u/xuniu</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/centos" term="centos" />
+<category scheme="http://segmentfault.com/feeds/t/redis" term="redis" />
+<category scheme="http://segmentfault.com/feeds/t/linux" term="linux" />
+<summary type="html">&lt;p&gt;公司的一个项目用到了&lt;code&gt;Redis&lt;/code&gt;需要部署到客户那边，以前只用过&lt;code&gt;Ubuntu&lt;/code&gt;,&lt;code&gt;Gentoo&lt;/code&gt;和&lt;code&gt;Fedora&lt;/code&gt;这种个人发行版。但是客户环境可能用的是&lt;code&gt;RHEL&lt;/code&gt;或者&lt;code&gt;CentOS&lt;/code&gt;，这两个版本是不是默认没装&lt;code&gt;gcc&lt;/code&gt;,&lt;code&gt;make&lt;/code&gt;等工具？有没有什么源可以直接安装&lt;code&gt;Redis&lt;/code&gt;？如果客户那边不能连接外网有没有打好的或者如何打成&lt;code&gt;RPM&lt;/code&gt;包？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322185" thr:count="3" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322185" thr:count="3"/>
+</entry>
+<entry>
+<title type="text">信号量的原子操作是如何实现的？</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322436" />
+<id>http://segmentfault.com/q/1010000000322436</id>
+<updated>2013-10-20T21:32:30+08:00</updated>
+<published>2013-10-20T21:32:30+08:00</published>
+<author>
+<name>hutushen222</name>
+<uri>http://segmentfault.com/u/hutushen222</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F" term="操作系统" />
+<summary type="html">&lt;blockquote&gt;
+  &lt;p&gt;操作系统有信号量（semaphore）的概念……检查数值、修改变量值以及可能发生的休眠操作均为单一的、不可分割的原子操作完成。保证一个一个信号量操作开始，则在操作完成或阻塞之前，其他进程均不允许访问该信号量。这种原子性对于解决同步问题和避免竞争条件是绝对比较的。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;以上是摘自《现代操作系统》中的一段话，我的问题是：信号量的原子操作是如何实现的？&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322436" thr:count="3" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322436" thr:count="3"/>
+</entry>
+<entry>
+<title type="text">MongoDB数据批量更新的问题</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322428" />
+<id>http://segmentfault.com/q/1010000000322428</id>
+<updated>2013-10-20T21:02:47+08:00</updated>
+<published>2013-10-20T21:02:47+08:00</published>
+<author>
+<name>xagee</name>
+<uri>http://segmentfault.com/u/xagee</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/mongodb" term="mongodb" />
+<summary type="html">&lt;pre&gt;&lt;code class="lang-json"&gt;{
+    "_id" : ObjectId("522d9783974929f816000000"),
+    "N" : "3301",
+    "S" : {
+        "L" : 373,
+        "W" : 210,
+        "H" : 82
+    },
+    "M" : "面料：麻料",
+    "I" : [
+        "http://l300img.b0.upaiyun.com/lb40_gallary/3301.jpg"
+    ],
+    "T" : [
+        {
+            "N" : "单人位",
+            "L" : 80,
+            "W" : 101,
+            "H" : 82,
+            "V" : 0.6626,
+            "P" : 580
+        },
+        {
+            "N" : "单人位",
+            "L" : 80,
+            "W" : 101,
+            "H" : 82,
+            "V" : 0.6626,
+            "P" : 580
+        },
+        {
+            "N" : "带扶单位",
+            "L" : 110,
+            "W" : 101,
+            "H" : 82,
+            "V" : 0.911,
+            "P" : 730
+        },
+        {
+            "N" : "转角位",
+            "L" : 101,
+            "W" : 101,
+            "H" : 82,
+            "V" : 0.8365,
+            "P" : 680
+        },
+        {
+            "N" : "贵妃位",
+            "L" : 110,
+            "W" : 101,
+            "H" : 82,
+            "V" : 0.911,
+            "P" : 680
+        }
+    ],
+    "O" : false
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;单条数据如上所示，我需要将所有的&lt;code&gt;P:数据值&lt;/code&gt;更改为&lt;code&gt;P:[数据值]&lt;/code&gt;，整个文档所有数据都需要改。&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322428" thr:count="0" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322428" thr:count="0"/>
+</entry>
+<entry>
+<title type="text">一段关于js继承的代码</title>
+<link rel="alternate" type="text/html" href="http://segmentfault.com/q/1010000000322386" />
+<id>http://segmentfault.com/q/1010000000322386</id>
+<updated>2013-10-20T18:05:09+08:00</updated>
+<published>2013-10-20T18:05:09+08:00</published>
+<author>
+<name>JavaNewBoy</name>
+<uri>http://segmentfault.com/u/javanewboy</uri>
+</author>
+<re:rank scheme="http://segmentfault.com/">0</re:rank>
+<category scheme="http://segmentfault.com/feeds/t/javascript" term="javascript" />
+<summary type="html">&lt;pre&gt;&lt;code&gt;a = {x: 1}
+b = Object.create(a)
+b.x = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;b中的x: 1应该会被x: 2覆盖掉吧？枚举一下似乎验证了是被覆盖了&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for (i in a){
+    console.log(a[i])
+}                               // 返回 1
+for (i in b){
+    console.log(b[i])           // 返回 2
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;但是在console中输入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;b
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;返回了&lt;code&gt;object{x: 2,x: 1}&lt;/code&gt;
+这是啥意思？咋还有个x: 1?&lt;/p&gt;
+</summary>
+<link rel="replies" type="text/html" href="http://segmentfault.com/q/1010000000322386" thr:count="1" />
+<link rel="replies" type="application/atom+xml" href="http://segmentfault.com/feeds/q/1010000000322386" thr:count="1"/>
+</entry>
+</feed>

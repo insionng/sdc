@@ -1,0 +1,60 @@
+{{template "sdc/head.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+<div class="error chromeframe">
+    您的浏览器版本 <strong>很旧很旧</strong>
+    ，为了正常地访问SudoChina，请升级您的浏览器
+    <a target="_blank" href="http://browsehappy.com">立即升级</a>
+</div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container">
+    <div class="row edge">
+        <div id="main" class="col-md-9">
+            <div class="tab-nav">
+                <h2 class="common-title">
+                    {{if .tab}}{{if eq .tab "lastest"}}最新问题{{end}}{{end}}
+                    {{if .tab}}{{if eq .tab "hotness"}}热门问题{{end}}{{end}}
+                    {{if .tab}}{{if eq .tab "unanswered"}}未解之谜{{end}}{{end}}
+                </h2>
+                <nav class="sub-tab">
+                    <a {{if .tab}}{{if eq .tab "lastest"}}class="current" {{end}}{{end}}href="/lastest/">最新问题</a>
+                    <a {{if .tab}}{{if eq .tab "hotness"}}class="current" {{end}}{{end}}href="/hotness/">热门问题</a>
+                    <a {{if .tab}}{{if eq .tab "unanswered"}}class="current" {{end}}{{end}}href="/unanswered/">未解之谜</a>
+                </nav>
+            </div>
+
+            <div id="content">
+                {{if .questions}}
+                    {{str2html .questions}}
+                {{else}}
+                    <article class="post" id="q-0">
+                        <div class="status">
+                        <span class="answer answered-accepted" title="0 个答案">0</span>
+                        <span class="vote" title="0 个投票">0</span>
+                        </div>
+                        <div class="p-summary">
+
+                        <h2>
+                            {{if .tab}}{{if eq .tab "lastest"}}尚无最新问题..{{end}}{{end}}
+                            {{if .tab}}{{if eq .tab "hotness"}}尚无热门问题..{{end}}{{end}}
+                            {{if .tab}}{{if eq .tab "unanswered"}}尚无未解之谜..{{end}}{{end}}
+                        </h2>
+          
+                        </div>
+                    </article>
+                {{end}}
+
+                {{if .pagesbar}}{{.pagesbar}}{{end}}
+            </div><!-- end #content -->
+        </div><!-- end #main -->
+        {{template "sdc/sidebar.html".}}
+    </div>
+</div><!-- end .wrap -->
+
+{{template "sdc/footer.html".}}
+</body>
+</html>

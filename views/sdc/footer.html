@@ -1,0 +1,136 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row inner hidden-xs">
+            <dl class="col-sm-2 site-link">
+                <dt>开源相关</dt>
+                <dd>
+                    <a href="http://opensource.org/licenses/BSD-3-Clause" target="_blank">BSD许可协议</a>
+                </dd>
+                <dd>
+                    <a href="http://opensource.org/licenses/mit-license" target="_blank" title="MIT是宽范的许可协议,作者只想保留版权,而无任何其他了限制.">MIT条款许可协议</a>
+                </dd>
+                <dd>
+                    <a href="https://github.com/lunny/xorm" target="_blank">Xorm</a>
+                </dd>
+                <dd>
+                    <a href="https://github.com/astaxie/beego" target="_blank">Beego</a>
+                </dd>
+            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>语言相关</dt>
+                <dd>
+                    <a href="http://golang.org/" target="_blank" title="GOLANG官方网站">GOLANG</a>
+                </dd>
+                <dd>
+                    <a href="https://www.python.org/" target="_blank" title="PYTHON官方网站">PYTHON</a>
+                </dd>
+            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>基友链接</dt>
+                <dd>
+                    <a href="http://wuwen.org/" target="_blank" title="无闻博客">无闻博客</a>
+                </dd>
+                <dd>
+                    <a href="http://fuxiaohei.me/" target="_blank" title="小黑博客">小黑博客</a>
+                </dd>
+                <dd>
+                    <a href="https://gowalker.org/" target="_blank" title="无闻作品 - Go Walker">Go Walker</a>
+                </dd>
+                <dd>
+                    <a href="http://beego.me/" target="_blank" title="老谢作品 - Beego - Golang Web 框架">Beego官网</a>
+                </dd>
+            </dl>
+            <dl class="col-sm-2 site-link">
+                <dt>关注我们</dt>
+                <dd>
+                    <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=311cf2ac877e51a627a31160dc4b0eba494691510ac5a591e5586699e4e2c6d1">官方Q群</a>
+                </dd>
+                {{/*
+                <dd>
+                    <a href="/feeds/">问答 RSS 订阅</a>
+                </dd>
+                */}}
+            </dl>
+            <dl class="col-sm-4 site-link" id="license">
+                <dt>内容许可</dt>
+                <dd>
+                    除特别说明外，用户内容均采用
+                    <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-sa/3.0/cn/">知识共享署名-相同方式共享 3.0 中国大陆许可协议</a>
+                    进行许可
+                </dd>
+            </dl>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2013-2014 SudoChina.com 当前呈现版本 Sdc Pro 14.3.31
+        </div>
+    </div>
+</footer>
+
+<script>
+    $(document).ready(function(){$('#session').login();$('input, textarea').placeholder();$('input.input-error,textarea.input-error').keyup(function(){$('.text-error',$(this).removeClass('input-error').parent()).remove();});
+
+    $('.has-dropdown > a').click(function(){
+        var $item=$(this).parent();
+        $("#site-nav-btn").removeClass('active');$('.site-nav').addClass('hidden-xs');$(".has-dropdown").not($item).removeClass('active');$item.toggleClass('active');return false;
+    });
+
+    $('html').click(function(){$(".has-dropdown, #site-nav-btn").removeClass('active');
+    $('.site-nav').addClass('hidden-xs');});
+    $('#site-nav-btn').click(function(){$(".has-dropdown").removeClass('active');
+    $(this).toggleClass('active');$('.site-nav').toggleClass('hidden-xs');return false;});
+    $(document).scroll(function(){if($(this).scrollTop()>720){$('#backtop').removeClass('hidden');}
+    else{$('#backtop').addClass('hidden');}});
+    $('#backtop').click(function(){$('body,html').animate({scrollTop:0});return false;})
+
+    if(0==$('.auth-login,.session-form,.session-finished').length)
+    {
+        if(1!=$.cookie('scmark'))
+            {$.cookie('scmark',1,{path:'/'});$.cookie('signbar',1,{path:'/'});}
+        else if(1==$.cookie('signbar'))
+            {$('.i-cancel',$('.login-notify').css('bottom',-60).removeClass('hidden').animate({'bottom':0})).click(function(){$.cookie('signbar',0,{path:'/'});$(this).parents('.login-notify').animate({'bottom':-60},function(){$(this).remove();});return false;});}
+    }
+
+    window.console&&window.console.info('Copyright 2013-2014 SudoChina.com');});
+</script>
+
+<div class="login-notify hidden-xs">
+    <div class="container">
+        <div class="row">
+            <div class="text-center col-md-6">
+<pre>│＼＿＿╭╭╭╭╭＿＿／│
+│　　　　　　　　　　　│
+ │　　　　　　　　　　　│ 
+ │　●　　　　　　　●　│ 
+│≡　　╰┬┬┬╯　　≡│ 
+ │　　　　╰─╯　　　　│ 
+ ╰──┬Ｏ───Ｏ┬──╯</pre>
+            </div>
+            <div class="col-md-6">
+                <h2>SudoChina</h2>
+                <p>GOLANG开发者技术问答社区，限时开放注册中！</p>
+                <a class="auth-small" href="/user/signup/">免费注册</a>
+                <a class="auth-small" href="/user/signin/">马上登录</a>
+                {{/*
+                <a class="auth-small" href="/user/oauth/google"> <i class="i-google"></i>
+                    Google
+                </a>
+                <a class="auth-small" href="/user/oauth/github"> <i class="i-github"></i>
+                    GitHub
+                </a>
+                <a class="auth-small" href="/user/oauth/weibo">
+                    <i class="i-weibo"></i>
+                    新浪微博
+                </a>
+                <a class="auth-small" href="/user/oauth/qq">
+                    <i class="i-qq"></i>
+                    腾讯QQ
+                </a>
+                */}}
+            </div>
+        </div>
+    </div>
+    <button type="button" class="close right i-cancel">&times;</button>
+</div>
+<!-- end .login-notify -->
+
+<a id="backtop" class="mobi-hide hidden" href="#body">返回顶部</a>

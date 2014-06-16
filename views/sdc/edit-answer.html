@@ -1,0 +1,68 @@
+{{template "sdc/head.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+<div class="error chromeframe">
+    您的浏览器版本 <strong>很旧很旧</strong>
+    ，为了正常地访问网站，请升级您的浏览器
+    <a target="_blank" href="http://browsehappy.com">立即升级</a>
+</div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container wrap">
+
+    <div class="row inner edge">
+        <div class="col-xs-12">
+            <h2 class="common-title">编辑答案</h2>
+        </div>
+        {{template "sdc/msgerr.html" .}}
+        <form id="ask" action="/edit/answer/{{.answer.Id}}/" method="post">
+            <div id="edit-main" class="col-xs-12 col-md-8">
+                <div id="content" class="edit-post">
+                    <div class="p">
+                        
+                        <label for="wmd-input" class="hid">内容</label>
+
+                        <textarea id="editor" class="form-control mono mousetrap textarea-14" name="content" tabindex="2" autocomplete="off" spellcheck="false" rows="15" style="display:none;">{{.answer.Content}}</textarea>
+
+                        <div id="epiceditor" class="form-control mono mousetrap textarea-14" style="height:500px;"></div>
+                        {{template "sdc/editor-epiceditor-answer.html".}}
+                        {{if .xsrfdata}}{{.xsrfdata}}{{end}}
+                    </div>
+                 
+                </div>
+                <!-- end #content --> </div>
+            <!-- end #edit-main -->
+
+            <div id="edit-secondary" class="col-xs-12 col-md-4">
+                <aside class="warn edit-guide">
+                    <h3>提问指南</h3>
+                    <ul>
+                        <li>内容与技术相关，有明确的答案，有代码贴代码，附上已尝试过的解决方案</li>
+                        <li>良好排版，文明用语，克己奉公</li>
+                    </ul>
+                </aside>
+
+                {{/*
+                <div class="p">
+                    <input type="checkbox" disabled>
+                    转发到新浪微博
+                    <a href="/user/settings?tab=auth" target="_blank" tabindex="6">绑定 &#8617;</a>
+                </div>
+                */}}
+                <div class="p">
+                    <input type="hidden" name="tags" id="tags"/>                
+                    <input type="submit" class="btn btn-primary btn-lg btn-xl action w-xxl ask-q-submit" tabindex="7" value="提交答案" />                
+                </div>
+            </div>
+            <!-- end #edit-secondary -->
+        </form>
+    </div>
+
+</div>
+<!-- end .wrap -->
+{{template "sdc/footer.html".}}
+</body>
+</html>

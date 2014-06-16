@@ -1,0 +1,95 @@
+{{template "sdc/head.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+    <div class="error chromeframe">您的浏览器版本<strong>很旧很旧</strong>，为了正常地访问网站，请升级您的浏览器 <a target="_blank" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container wrap">
+    <div class="row inner edge">
+        <section class="col-xs-12 col-md-4 first">
+          <h2 class="top-title">登录SudoChina</h2>
+           <p class="title-description">欢迎您登录本站独立帐号,完成后即可获得更全面的使用体验.</p>
+                {{template "sdc/msgerr.html" .}}
+                <div class="tabbable" style="margin-bottom: 18px;">
+                  <ul class="nav nav-tabs">
+                    <li class="active">
+                      <a href="#tab1" data-toggle="tab">登录</a>
+                    </li>
+                    <li class="">
+                      <a href="#tab2" data-toggle="tab">注册</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+                    <div class="tab-pane active" id="tab1">
+                      <form class="form-horizontal" action="/user/signin/" method="post">
+                        <div class="control-group">
+                          <label class="control-label" for="email">Email</label>
+                          <div class="controls">
+                            <input type="text" id="email" name="email" placeholder="Email" class="form-control input-lg text-34"/>
+                            {{if .xsrfdata}}{{.xsrfdata}}{{end}}
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="password">密码</label>
+                          <div class="controls">
+                            <input type="password" id="password" name="password" placeholder="Password" class="form-control input-lg text-34"/></div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <label class="checkbox">
+                              {{if .remember}}<input type="checkbox" name="remember" checked>{{else}}<input type="checkbox" name="remember">{{end}}记住密码</label>
+                            <button type="submit" class="btn btn-primary btn-lg btn-xl">登录</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                      <form class="form-horizontal" action="/user/signup/" method="post">
+                        <div class="control-group">
+                          <label class="control-label" for="email">Email</label>
+                          <div class="controls">
+                            <input type="text" id="email" name="email" placeholder="Email" class="form-control input-lg text-34"/>
+                            {{if .xsrfdata}}{{.xsrfdata}}{{end}}
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="email">用户名</label>
+                          <div class="controls">
+                            <input type="text" id="username" name="username" placeholder="Username" class="form-control input-lg text-34"/>
+                          </div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="password">密码</label>
+                          <div class="controls">
+                            <input type="password" id="password" name="password" placeholder="Password" class="form-control input-lg text-34"/></div>
+                        </div>
+                        <div class="control-group">
+                          <label class="control-label" for="repassword">重复密码</label>
+                          <div class="controls">
+                            <input type="password" id="repassword" name="repassword" placeholder="Same Password" class="form-control input-lg text-34"/></div>
+                        </div>
+                        <div class="control-group">
+                          <div class="controls">
+                            <button type="submit" class="btn btn-primary btn-lg btn-xl">注册</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+        </section>
+
+        <section class="col-xs-12 col-md-4">
+        </section>
+
+        <section class="col-xs-12 col-md-4 last">
+        </section>
+
+    </div>
+</div>
+{{template "sdc/footer.html".}}
+</body>
+</html>

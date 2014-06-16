@@ -1,0 +1,12 @@
+html { padding:10px; }
+
+body {
+  border:0;
+  background:rgb(41,41,41);
+  font-family:monospace;
+  font-size:14px;
+  color:#ddd;
+  line-height:1.35em;
+  margin:0;
+  padding:0;
+}

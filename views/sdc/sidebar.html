@@ -1,0 +1,134 @@
+<div id="secondary" class="col-md-3 hidden-xs hidden-sm">
+ {{if .userid}}
+    {{/*
+    <aside id="profile-tab">
+        <nav class="navlist-group navlist-group-right">
+            <a class="navlist-group-item" href="/bookmarked">我收藏的内容</a>
+            <a class="navlist-group-item" href="/users/following">我关注的人</a>
+            <a class="navlist-group-item" href="/user/invitation">邀请朋友加入</a>
+        </nav>
+    </aside>
+    <aside class="box follow-tags">
+        <a href="/tags" class="i-more right" data-toggle="tooltip" data-placement="bottom" rel="tooltip" title="" data-original-title="更多">更多</a>
+        <h3>关注标签</h3>
+        <ul class="timestream">
+            <li class="nothing">
+                还没有关注任何标签哦
+                <br>关注了标签相关问题就会高亮显示</li>
+        </ul>
+    </aside>
+    */}}
+ {{else}}
+    <aside class="greeting">
+        <h3 class="top-title">关于我们</h3>
+        <p>SudoChina是一个GOLANG开发者为主的技术社区：聚集了GOLANG领域的开发者，交流技术，分享知识，如果你想快速获得成长，那就加入我们吧..</p>
+        <ul class="greeting--login list-unstyled">
+        <li>
+            <a href="/user/signin/" class="btn btn-default">
+                马上登录SudoChina帐号
+            </a>
+            </li>
+            <li>
+            <a href="/user/signup/" class="btn btn-default">
+                立即注册SudoChina帐号
+            </a>
+            {{/*
+            <a href="/user/oauth/google" class="btn btn-default">
+            <i class="i-google"></i>
+            使用 Google 帐号登录
+            </a>
+            </li>
+            <li>
+            <a href="/user/oauth/weibo" class="btn btn-default">
+            <i class="i-weibo"></i>
+            使用新浪微博帐号登录
+            </a>
+            */}}
+        </li>
+        </ul>
+    </aside>
+    <div style="margin-top: 20px">
+        <a href="/user/signup/" target="_blank" style="display: block; margin-top: 5px"><img src="/static/sdc/img/joinus.png" alt="加入我们" /></a>
+    </div>
+ {{end}}
+
+ {{if .replys_8s}}
+    <aside class="box">
+        <h3 class="top-title">别样风情</h3>
+        <ul class="timestream show-pop-tag">
+
+      {{range .replys_8s}}
+            <li>
+                <h4>
+                    <a href="/{{.Pid}}/#answer-{{.Id}}">
+                        {{if .Content}}
+                            {{$t:=markdown2text .Content}}
+                            {{if $t}}
+                                {{$c:=substr $t 0 50 }}
+                                {{if $c}}
+                                    {{$c}}
+                                {{end}}
+                            {{end}}
+                        {{end}}
+                    </a>
+                </h4>
+                <span>
+                    <a class="trigger" href="#{{if eq .Author ""}}guest{{else}}{{.Author}}{{end}}">{{if eq .Author ""}}游客{{else}}{{.Author}}{{end}}</a>
+                    回答了问题
+                </span>
+            </li>
+      {{end}}
+        {{/*
+            <li>
+                <h4>
+                    <a href="/c/1050000000446106">
+                        js里var name=''张三&quot; 那么name.length 这个属性在UTF-8 GB2312里分别等于多少？
+                    </a>
+                </h4>
+                <span>
+                    <a class="trigger" href="/u/lizheming">公子</a>
+                    评论了该答案
+                </span>
+            </li>
+            <li>
+                <h4>
+                    <a href="/q/1010000000445817/a-1020000000446096">希望页面能添加【返回顶部】功能</a>
+                </h4>
+                <span>
+                    <a class="trigger" href="/u/hammer_zeng">hammer zeng</a>
+                    回答了该问题
+                </span>
+            </li>
+            <li>
+                <h4>
+                    <a href="/c/1050000000446095">CentOS SSH公钥登录问题</a>
+                </h4>
+                <span>
+                    <a class="trigger" href="/u/p_chou">P_Chou</a>
+                    评论了该问题
+                </span>
+            </li>
+            <li>
+                <h4>
+                    <a href="/c/1050000000446094">python读取文件内容</a>
+                </h4>
+                <span>
+                    <a class="trigger" href="/u/le_conjoint">Le conjoint</a>
+                    评论了该问题
+                </span>
+            </li>
+            <li>
+                <a href="/u/dickorange">
+                    <img class="avatar-32 left" src="http://sfault-avatar.b0.upaiyun.com/133/192/1331929047-1030000000341373_small" alt="">    
+                    <h4>DickOrange</h4>
+                </a>
+                <span>
+                    <a class="trigger" href="/u/scarlex">scarlex</a>
+                    关注了该用户
+                </span>
+            </li>
+        */}}
+        </ul>
+    </aside>
+ {{end}}
+</div>

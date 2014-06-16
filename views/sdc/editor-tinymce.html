@@ -1,0 +1,16 @@
+<script type="text/javascript" src="/static/editor/tinymce/tinymce.min.js"></script>
+</script><script type="text/javascript">
+tinymce.init(
+{
+
+	selector: "textarea.editor", language : 'zh_CN',
+ 	{{/*menubar : false,*/}}
+	plugins: [
+	  "advlist autolink lists link image charmap print preview anchor",
+	  "searchreplace visualblocks code fullscreen",
+	  "insertdatetime media table contextmenu paste jbimages"
+	],
+	toolbar: "insertfile undo redo | styleselect | bold italic | bullist numlist outdent indent | link image jbimages",
+}
+);
+</script>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>SegmentFault</ShortName>
+    <Description>SegmentFault - Search</Description>
+    <InputEncoding>UTF-8</InputEncoding>
+    <Contact>service@segmentfault.com</Contact>
+    <Image height="16" width="16" type="image/x-icon">http://segmentfault.com/favicon.ico</Image>
+    <Developer>SegmentFault Team</Developer>
+    <Url type="text/html" method="get" template="http://segmentfault.com/search?q={searchTerms}" />
+</OpenSearchDescription>

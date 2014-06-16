@@ -1,0 +1,265 @@
+{{template "sdc/head.html".}}
+<body id="body">
+
+<!--[if lt IE 9]>
+<div class="error chromeframe">
+    您的浏览器版本 <strong>很旧很旧</strong>
+    ，为了正常地访问SudoChina，请升级您的浏览器
+    <a target="_blank" href="http://browsehappy.com">立即升级</a>
+</div>
+<![endif]-->
+
+{{template "sdc/navbar.html".}}
+{{template "sdc/header.html".}}
+<div class="container wrap">
+
+    <div class="row inner edge">
+        <div class="col-xs-12">
+            <h2 class="common-title">提出新问题</h2>
+        </div>
+        {{template "sdc/msgerr.html" .}}
+        <form id="ask" action="/new/question/" method="post">
+            <div id="edit-main" class="col-xs-12 col-md-8">
+                <div id="content" class="edit-post">
+                    <div class="p">
+                        <label for="title" class="hid">标题</label>
+                        <input type="text" name="title" tabindex="1" value="" class="form-control input-lg text-34" autocomplete="off" spellcheck="false" placeholder="标题，用一句话说清你的问题" />
+                    </div>
+                    {{/*
+                    <div id="wmd-button-bar"></div>
+                    */}}
+                    <div class="p">
+                        {{/*
+                        <div class="editor-help hidden">
+                            <ul class="editor-help-tabs">
+                                <li rel="heading">标题 / 粗斜体</li>
+                                <!--
+                        -->
+                                <li rel="code">代码</li>
+                                <!--
+                        -->
+                                <li rel="link">链接</li>
+                                <!--
+                        -->
+                                <li rel="image">图片</li>
+                                <!--
+                        -->
+                                <li rel="split">换行 / 分隔符</li>
+                                <!--
+                        -->
+                                <li rel="list">列表 / 引用</li>
+                                <!--
+                        -->
+                                <li class="right">
+                                    <a href="/1010000000187808" target="_blank">高级技巧</a>
+                                </li>
+                            </ul>
+
+                            <!-- 链接 -->
+                            <div class="editor-help-content hidden" rel="link">
+
+                                <p>常用链接方法</p>
+                                <pre>
+                        文字链接 [链接名称](http://链接网址)
+                        网址链接 &lt;http://链接网址&gt;
+                        </pre>
+                                <p>高级链接技巧</p>
+                                <pre>
+                        这个链接用 1 作为网址变量 [Google][1].
+                        这个链接用 yahoo 作为网址变量 [Yahoo!][yahoo].
+                        然后在文档的结尾为变量赋值（网址） <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>[1]: http://www.google.com/ <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>[yahoo]: http://www.yahoo.com/
+                        </pre>
+
+                            </div>
+                            <!-- end 链接 -->
+
+                            <!-- 图片 -->
+                            <div class="editor-help-content hidden" rel="image">
+
+                                <p>
+                                    跟链接的方法区别在于前面加了个感叹号
+                                    <code>!</code>
+                                    ，这样是不是觉得好记多了呢？
+                                </p>
+                                <pre>![图片名称](http://图片网址)</pre>
+                                <p>当然，你也可以像网址那样对图片网址使用变量</p>
+                                <pre>
+                    这个链接用 1 作为网址变量 [Google][1].
+                    然后在文档的结尾位变量赋值（网址）
+
+                    <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>[1]: http://www.google.com/logo.png
+                    </pre>
+
+                            </div>
+                            <!-- end 图片 -->
+
+
+                            <!-- 换行、分隔符 -->
+                            <div class="editor-help-content hidden" rel="split">
+
+                                <p>如果另起一行，只需在当前行结尾加 2 个空格</p>
+                                <pre>
+                    在当前行的结尾加 2 个空格<i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>
+                    这行就会新起一行
+                    </pre>
+                                <p>如果是要起一个新段落，只需要空出一行即可。</p>
+                                <p>
+                                    如果你有写分割线的习惯，可以新起一行输入三个减号
+                                    <code>-</code>
+                                    ：
+                                </p>
+                                <pre>---</pre>
+
+                            </div>
+                            <!-- end 换行、分隔符 -->
+
+                            <!-- 列表、引用 -->
+                            <div class="editor-help-content hidden" rel="list">
+
+                                <p>普通列表</p>
+                                <pre>
+                    -<i class="nbsp">&nbsp;</i>列表文本前使用 [减号+空格]
+                    +<i class="nbsp">&nbsp;</i>列表文本前使用 [加号+空格]
+                    *<i class="nbsp">&nbsp;</i>列表文本前使用 [星号+空格]
+                    </pre>
+                                <p>带数字的列表</p>
+                                <pre>
+                    1.<i class="nbsp">&nbsp;</i>列表前使用 [数字+空格]
+                    2.<i class="nbsp">&nbsp;</i>我们会自动帮你添加数字
+                    7.<i class="nbsp">&nbsp;</i>不用担心数字不对，显示的时候我们会自动把这行的 7 纠正为 3
+                    </pre>
+                                <p>引用</p>
+                                <pre>
+                    &gt;<i class="nbsp">&nbsp;</i>引用文本前使用 [大于号+空格]
+                    &gt;<i class="nbsp">&nbsp;</i>折行可以不加，新起一行都要加上哦
+                    </pre>
+
+                            </div>
+                            <!-- end 列表、引用 -->
+
+                            <!-- 代码 -->
+                            <div class="editor-help-content hidden" rel="code">
+
+                                <p>
+                                    如果你只想高亮语句中的某个函数名或关键字，可以使用
+                                    <code>`function_name()`</code>
+                                    实现
+                                </p>
+                                <p>
+                                    通常我们会根据您的代码片段适配合适的高亮方法，但你也可以用
+                                    <code>```</code>
+                                    包裹一段代码，并指定一种语言
+                                </p>
+                                <pre>
+                    ```<strong>javascript</strong>
+                    $(document).ready(function () {
+                        alert('hello world');
+                    });
+                    ```
+                    </pre>
+                                <p>
+                                    支持的语言：
+                                    <code>actionscript, apache, bash, clojure, cmake, coffeescript, cpp, cs, css, d, delphi, django, erlang, go, haskell, html, http, ini, java, javascript, json, lisp, lua, markdown, matlab, nginx, objectivec, perl, php, python, r, ruby, scala, smalltalk, sql, tex, vbscript, xml</code>
+                                </p>
+
+                                <p>您也可以使用 4 空格缩进，再贴上代码，实现相同的的效果</p>
+                                <pre>
+                    <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>def g(x):
+                    <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>yield from range(x, 0, -1)
+                    <i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i><i class="nbsp">&nbsp;</i>yield from range(x)
+                    </pre>
+                            </div>
+                            <!-- end 代码 --> </div>
+                        <!-- end .editor-help -->
+                        */}}
+                        <label for="wmd-input" class="hid">内容</label>
+                        <textarea id="editor" class="form-control mono mousetrap textarea-14" name="content" tabindex="2" autocomplete="off" spellcheck="false" rows="15" style="display:none;"></textarea>
+
+                        <div id="epiceditor" class="form-control mono mousetrap textarea-14" style="height:500px;"></div>
+                        {{template "sdc/editor-epiceditor-question.html".}}
+                    </div>
+                    {{/*
+                    <div id="wmd-preview" class="fmt preview"></div>
+                    */}}
+                </div>
+                <!-- end #content --> </div>
+            <!-- end #edit-main -->
+
+            <div id="edit-secondary" class="col-xs-12 col-md-4">
+                <aside class="warn edit-guide">
+                    <h3>提问指南</h3>
+                    <ul>
+                        <li>内容与技术相关，有明确的答案，有代码贴代码，附上已尝试过的解决方案</li>
+                        <li>良好排版，文明用语，克己奉公</li>
+                    </ul>
+                </aside>
+
+                <div class="tag-edit-form p q-info rounded-2">
+                    <h3 class="required">问题标签（至少 1 个）</h3>
+                    <ul class="tag-list show-pop-tag">
+                        <li class="add-tag">
+                            <select name="nodes" class="form-control pull-left text-28 w-xl mousetrap tag-input" id="v" onclick="javascript:adddiv(v.value);">
+                                {{if .nodes}}
+                                    {{if .inode}}
+                                    <option value="{{.inode.Title}}" selected>{{.inode.Title}} [默认]</option>
+                                    {{end}}
+                                    {{range .nodes}}
+                                    <option value="{{.Title}}">{{.Title}}</option>
+                                    {{end}}
+                                {{else}}
+                                    <option value="">尚无标签</option>
+                                {{end}}
+                            </select>
+                            <input type="button" class="btn btn-default btn-l tag-input-btn" value="选择" onclick="javascript:adddiv(v.value);"/>
+                        </li>
+                        <li class="add-tag">
+                            <input type="text" class="form-control pull-left text-28 w-xl mousetrap tag-input" autocomplete="off" tabindex="3"  placeholder="手动输入标签,如：golang" id="vv">
+                            <input type="button" class="btn btn-default btn-l tag-input-btn" value="添加" onclick="javascript:adddiv(vv.value);"></li>
+                    </ul>
+                    <script language="javascript">
+                        var count= 0 ;
+                        var max = 100;
+                        function adddiv(v) {
+                                if(count >= max)    return;//限制最多max个
+                                if(v=="")    return;//限制最多max个
+                                count++;
+                                //自增id不同的HTML对象，并附加到容器最后
+                                var newDiv ='<span style="margin:5px;display:inline-block;" id="elm' + count +'">'
+                                +'<a class="tag" title="'+v+'">'+v+',</a>'
+                                +'<input type="button" value="x" onclick=\'deldiv("elm' + count + '");\' class="button"/></span>';
+                                document.getElementById("divc").insertAdjacentHTML("beforeEnd", newDiv);
+                        }
+                        //删除指定元素
+                        function deldiv(diva) {
+                                count--;
+                                document.getElementById(diva).parentNode.removeChild(document.getElementById(diva));
+                        }
+                        function settags() {
+                            document.getElementById("tags").value = document.getElementById("divc").innerText;
+                            document.getElementById("ask").submit();
+                        }
+                    </script>
+                    <div id="divc"></div>
+                </div>
+                {{/*
+                <div class="p">
+                    <input type="checkbox" disabled>
+                    转发到新浪微博
+                    <a href="/user/settings?tab=auth" target="_blank" tabindex="6">绑定 &#8617;</a>
+                </div>
+                */}}
+                <div class="p">
+                    <input type="hidden" name="tags" id="tags"/>                
+                    <input type="button" onclick="settags();" class="btn btn-primary btn-lg btn-xl action w-xxl ask-q-submit" tabindex="7" value="提交问题" />                
+                </div>
+            </div>
+            <!-- end #edit-secondary -->
+        </form>
+    </div>
+
+</div>
+<!-- end .wrap -->
+{{template "sdc/footer.html".}}
+
+</body>
+</html>

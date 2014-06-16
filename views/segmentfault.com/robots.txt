@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /user/
+Disallow: /api/
+Disallow: /r/
+Disallow: /share/
+Disallow: /ask
