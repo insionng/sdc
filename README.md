@@ -17,3 +17,8 @@ https://github.com/insionng/sdc
 
 开源赞助我(支付宝): insion@live.com
 
+
+演示
+===
+
+[SudoChina](http://sudochina.com/)
