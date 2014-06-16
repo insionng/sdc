@@ -392,8 +392,8 @@ func CreatTables() error {
 func initData() {
 	//用户等级划分：正数是普通用户，负数是管理员各种等级划分，为0则尚未注册
 	if usr, err := GetUserByRole(-1000); usr == nil && err == nil {
-		if id, err := AddUser("insion@sudochina.com", "root", "root", "root", helper.Encrypt_hash("rootpass", nil), -1000); err == nil {
-			fmt.Println("Default Email:insion@sudochina.com ,Username:root ,Password:rootpass Userid:", id)
+		if id, err := AddUser("root@sudochina.com", "root", "root", "root", helper.Encrypt_hash("rootpass", nil), -1000); err == nil {
+			fmt.Println("Default Email:root@sudochina.com ,Username:root ,Password:rootpass Userid:", id)
 		} else {
 			fmt.Print("create root got errors:", err)
 		}
