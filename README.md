@@ -5,7 +5,7 @@ Sudochina.com  Q&amp;A system
 
 这个系统是[Toropress](https://github.com/insionng/toropress)衍生品,比之成熟不少.
 
-当然了,Toropress毕竟是我第一个开源作品,而且没怎么更新过了,但是已经衍生出我很多个开源项目了,算是功德圆满.
+当然了,Toropress毕竟是我第一个开源作品,而且没怎么更新过,但是已经衍生出我很多个开源项目了,算是功德圆满.
 
 这个是从现在SudoChina运行系统剥离出来的独立版本,并没有博客系统这部分.
 
