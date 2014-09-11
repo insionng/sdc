@@ -24,3 +24,10 @@ https://github.com/insionng/sdc
 ===
 
 [SudoChina](http://sudochina.com/)
+
+
+##轻量级社区版本
+
+[YouGam社区](http://www.yougam.com/)
+
+(类似V2EX,购买系统请联系作者QQ547092001)
